@@ -1,0 +1,160 @@
+html {
+	font-weight: lighter;
+}
+
+.navlink {
+	font-size: 22px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.swifty {
+	margin: 0 auto;
+	margin-top: 2%;
+	
+}
+
+.flow-text{
+	font-weight: lighter;
+	padding: 0px 100px;
+}
+
+.get-started {
+	margin-top: 1%;
+}
+
+
+.input-field label {
+	position: absolute;
+    font-size: 1.7rem;
+    cursor: text;
+    transition: .2s ease-out;
+}
+
+
+nav{
+	background: #42A5F5;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #42E035;
+    text-align: center;
+    letter-spacing: .5px;
+    /*transition: .2s ease-out;*/
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 1rem;
+    text-transform: none;
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #7DFF5F;
+}
+
+element.style {
+}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border: 1px solid #52A8EC;
+    outline:0;
+    border-color: rgba(82,168,236,.8);
+    box-shadow: 0 1px 1px rgba(0,0,0,.075) inset, 0 0 8px 
+    rgba(82,168,236,.6);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.2rem;
+
+}
+
+element.style {
+}
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: transparent;
+    border: 1px solid #42A5F5;
+    border-radius: 6px;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all .3s;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.yourName {
+	position: relative;
+	top: 1rem;
+}
+.blueText {
+	color:#0082C3; 
+	font-weight: normal;
+}
+
+.modal {
+	padding-top: 5%;
+	background-color: #ffffff;
+}
+.modal-content {
+	padding-top: 15%; 
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: ffffff;
+}
+
+.next-button {
+	text-align: center;
+	/*display: inline-block;*/
+	position: absolute;
+	bottom: 3rem;
+}
+
+.back-button {
+	text-align: center;
+	/*display: inline-block;*/
+	position: absolute;
+	bottom: 3rem;
+	/*background-color: blue;*/
+}
+
+.center-button {
+    text-align: center;
+    position: absolute;
+    bottom: 3rem;
+
+}
+#validNameCheck {
+	text-align: center;
+	font-style: italic;
+	color: red;
+	font-weight: normal;
+}
+
+.centerBtn3 {
+    width: 180px;
+    margin: 0px 37%;
+    text-transform: none;
+}
+
+.nextBtn3 {
+    width: 140px;
+    text-transform: none;
+
+}
+
+.blueLine {
+    width: 70%;
+    height: 10px;
+    border-top: 1px solid #0082C3;
+    margin: 0px auto;
+
+}
