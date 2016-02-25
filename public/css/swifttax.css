@@ -1,4 +1,9 @@
 
+html {
+	font-weight: lighter;
+}
+
+
 /*////////////*/
 /*Nav Settings*/
 /*///////////*/
@@ -8,7 +13,35 @@
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+.swifty {
+	margin: 0 auto;
+	margin-top: 2%;
+	
+}
+
+.flow-text{
+	font-weight: lighter;
+	padding: 0px 100px;
+}
+
+.get-started {
+	margin-top: 1%;
+}
+
+
+.input-field label {
+	position: absolute;
+    font-size: 1.7rem;
+    cursor: text;
+    transition: .2s ease-out;
+}
+
+
+nav{
+	background: #42A5F5;
 }
 
 nav{
@@ -56,14 +89,23 @@ nav{
     background-color: #42E035;
     text-align: center;
     letter-spacing: .5px;
+
+    /*transition: .2s ease-out;*/
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 1rem;
+    text-transform: none;
+
     transition: .2s ease-out;
     cursor: pointer;
     border-radius: 10px;
+
 }
 
 .btn:hover, .btn-large:hover {
     background-color: #7DFF5F;
 }
+
 
 /*/////////////////////////*/
 /*Input Settings for Modals*/
@@ -100,6 +142,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     outline: none;
     height: 3rem;
     width: 100%;
+    font-size: 1rem;
     margin: 0 0 15px 0;
     padding: 0;
     box-shadow: none;
@@ -110,6 +153,74 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     font-size: 1.2rem;
 }
 
+.yourName {
+	position: relative;
+	top: 1rem;
+}
+.blueText {
+	color:#0082C3; 
+	font-weight: normal;
+}
+
+.modal {
+	padding-top: 5%;
+	background-color: #ffffff;
+}
+.modal-content {
+	padding-top: 15%; 
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: ffffff;
+}
+
+.next-button {
+	text-align: center;
+	/*display: inline-block;*/
+	position: absolute;
+	bottom: 3rem;
+}
+
+.back-button {
+	text-align: center;
+	/*display: inline-block;*/
+	position: absolute;
+	bottom: 3rem;
+	/*background-color: blue;*/
+}
+
+.center-button {
+    text-align: center;
+    position: absolute;
+    bottom: 3rem;
+
+}
+#validNameCheck {
+	text-align: center;
+	font-style: italic;
+	color: red;
+	font-weight: normal;
+}
+
+.centerBtn3 {
+    width: 180px;
+    margin: 0px 37%;
+    text-transform: none;
+}
+
+.nextBtn3 {
+    width: 140px;
+    text-transform: none;
+
+}
+
+.blueLine {
+    width: 70%;
+    height: 10px;
+    border-top: 1px solid #0082C3;
+    margin: 0px auto;
+
+}
 /*//////////////////////////////////////////////////////////////*/
 /*Positiong to first modal, may need to add to all modal classes*/
 /*//////////////////////////////////////////////////////////////*/
