@@ -1,6 +1,12 @@
+
 html {
 	font-weight: lighter;
 }
+
+
+/*////////////*/
+/*Nav Settings*/
+/*///////////*/
 
 .navlink {
 	font-size: 22px;
@@ -38,21 +44,78 @@ nav{
 	background: #42A5F5;
 }
 
+nav{
+	background: #42A5F5;
+}
+
+/*////////////////////////////////////////////////////////////*/
+/*Animations for Swift Tax Form and Getting Started Button Div*/
+/*////////////////////////////////////////////////////////////*/
+
+.swifttaxform {
+	margin: 0 auto;
+	margin-top: 2%;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: .1s;
+    -webkit-animation-iteration-count: 1;
+	
+}
+
+.get-started {
+	margin-top: 1%;
+   -webkit-animation-duration: 2.3s;
+   -webkit-animation-delay: 2s;
+   -webkit-animation-iteration-count: 1;
+}
+
+/*/////////////////////////////////////////////////*/
+/*Responsive Flow Text Settings for entire project */
+/*/////////////////////////////////////////////////*/
+
+.flow-text{
+	line-height: 1.0;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: rgba(0,0,0,0.87);
+}
+
+/*///////////////////////////////////////////*/
+/*Button Colors and Color changes for project*/
+/*///////////////////////////////////////////*/
+
 .btn, .btn-large {
     text-decoration: none;
     color: #fff;
     background-color: #42E035;
     text-align: center;
     letter-spacing: .5px;
+
     /*transition: .2s ease-out;*/
     cursor: pointer;
     border-radius: 5px;
     padding: 0 1rem;
     text-transform: none;
+
+    transition: .2s ease-out;
+    cursor: pointer;
+    border-radius: 10px;
+
 }
 
 .btn:hover, .btn-large:hover {
     background-color: #7DFF5F;
+}
+
+
+/*/////////////////////////*/
+/*Input Settings for Modals*/
+/*/////////////////////////*/
+
+.input-field label {
+	position: absolute;
+    font-size: 1.7rem;
+    cursor: text;
+    transition: .2s ease-out;
 }
 
 element.style {
@@ -158,3 +221,14 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin: 0px auto;
 
 }
+/*//////////////////////////////////////////////////////////////*/
+/*Positiong to first modal, may need to add to all modal classes*/
+/*//////////////////////////////////////////////////////////////*/
+
+.yourName {
+	position: relative;
+	top: 4rem;
+}
+
+
+
