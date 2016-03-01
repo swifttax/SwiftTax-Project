@@ -19,6 +19,19 @@ $(document).ready(function(){
     
   });
 
+ // Kickoff button makes swift tax div, form and button disappear
+
+ $(".kickoff").click(function(){
+  $(".main").addClass('animated zoomOut');
+
+});
+
+  $("#modal2").hide();
+  $("#modal1NextBtn").click(function(){
+      $("#modal1").hide();
+      $("#modal2").show();
+  });
+
   var inputName;
 
   $("#inputFirstName").keyup(function(){
@@ -35,6 +48,24 @@ $(document).ready(function(){
       $("#validNameCheck").show() }
 
   });
+
+  // function blink(id, interval) {
+  //   var on = $('#' + id);
+  //   var off = $('#un' + id);
+  
+  // !function blinking() {
+  //   on.toggle();
+  //   off.toggle();
+  //   setTimeout(blinking, interval);
+  // }()
+
+  // function blinking() {
+  //   on.show();
+  //   off.hide();
+  // }
+// };
+
+// blink('on', 1000);
 
 
 	$(".nextBtn1").click(function(){
@@ -197,22 +228,11 @@ $.get(jobUrl, {
   .done(function(data){
     console.log(data);
     console.log(data.childNode[0]);
-  })
+  });
 
- });
 
-// Kickoff button makes swift tax div, form and button disappear
 
-	$(".kickoff").click(function(){
-	$(".main").addClass('animated zoomOut');
 
-});
-
-	$("#modal2").hide();
-	$("#modal1NextBtn").click(function(){
-  		$("#modal1").hide();
-  		$("#modal2").show();
-	});
       
 
 
