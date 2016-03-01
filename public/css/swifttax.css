@@ -17,7 +17,7 @@ a:hover {
 }
 
 .swifttaxform {
-	margin: 0 auto;
+	margin: 0px auto;
 	margin-top: 2%;
 	
 }
@@ -44,7 +44,7 @@ nav{
 /*////////////////////////////////////////////////////////////*/
 
 .swifttaxform {
-	margin: 0 auto;
+	margin: 0px auto;
 	margin-top: 2%;
     -webkit-animation-duration: 2s;
     -webkit-animation-delay: .1s;
@@ -149,9 +149,11 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 	top: 1rem;
 }
 
-.progressbar1 {
+.progressbar {
     margin: 0px auto;
     margin-top: 4%;
+    -webkit-animation-duration: 2.0s;
+   -webkit-animation-iteration-count: 1;
 }
 
 .blueText {
@@ -231,4 +233,12 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin-bottom: 2%;
 }
 
+.alaska {
+    margin-top: 5%;
+}
 
+.inputInterest {
+    -webkit-animation-duration: 1.2s;
+    -webkit-animation-delay: .1s;
+    -webkit-animation-iteration-count: 1;
+}

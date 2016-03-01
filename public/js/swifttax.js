@@ -116,7 +116,7 @@ $(document).ready(function(){
   });
   $(".centerBtn5").click(function(){
     $('.centerBtn5').hide();
-    $("#interestForm").slideDown(1500);
+    $("#interestForm").slideDown(0);
     $(".nextBtn5").text("Continue");
     $("#interestQuestion").text("Enter your total taxable interest.");
   });
@@ -138,7 +138,7 @@ $(document).ready(function(){
   });
   $(".centerBtn6").click(function(){
     $('.centerBtn6').hide();
-    $("#unemploymentForm").slideDown(1500);
+    $("#unemploymentForm").slideDown(0);
     $(".nextBtn6").text("Continue");
     $("#unemployQuestion").text("Enter your total unemployment compensation received in 2015.");
   });
@@ -157,8 +157,9 @@ $(document).ready(function(){
   });
   $(".centerBtn7").click(function(){
     $('.centerBtn7').hide();
-    $("#alaskaForm").slideDown(1500);
+    $("#alaskaForm").slideDown(0);
     $(".nextBtn7").text("Continue");
+    $(".alaska").hide();
     $("#alaskaQuestion").text("Enter your total Alaska Permanent Fund dividends received in 2015.");
   });
     $(".nextBtn8").click(function(){

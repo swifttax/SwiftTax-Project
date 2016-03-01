@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 <link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" href="animate.min.css">
 <link rel="stylesheet" type="text/css" href="css/swifttax.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta charset="UTF-8">
@@ -17,7 +18,7 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo"><img id="logo" src="/img/logo.png"></a>
+        <a href="http://swifttaxproject.dev/swifttax.html" class="brand-logo"><img id="logo" src="/img/logo.png"></a>
         <ul class="right hide-on-med-and-down">
           <li><a class="navlink" href="">Home</a></li>
           <li><a class="navlink" href="">About</a></li>
@@ -46,7 +47,7 @@
     <p class="flow-text center">What is your first name?</p>
     <div class="col-sm-4 col-sm-offset-4">
       <input type="text" class="form-control" id="inputFirstName">
-      <p id="validNameCheck" class="shake">Please enter a valid name</p>
+      <p id="validNameCheck" class="shake animated">Please enter a valid name</p>
     </div>
   </div>
    <div class="emptyDiv" style="height: 100%">
@@ -69,6 +70,8 @@
     <p class="flow-text center">You're just a few short steps away from completing your 2015 Tax Return.</p>
   </div>
    <div class="emptyDiv" style="height: 100%">
+      <img id="on"class="img-responsive progressbar animated flipInX" src="/img/progressbar1.png">
+
    <a href="#modal1" class="backBtn2 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
    <a href="#modal2" class="nextBtn2 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
   </div>
@@ -118,8 +121,7 @@
     </form>
   </div>
    <div class="emptyDiv" style="height: 100%">
-   <img id="on"class="img-responsive progressbar1" src="/img/progressbar1.png">
-   <a href="#modal1" class="backBtn4 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+<a href="#modal1" class="backBtn4 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
    <a href="#modal2" class="nextBtn4 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
   </div>
 </div>
@@ -138,20 +140,13 @@
     <p class="flow-text center">This includes any interest you received from bank accounts, or from loans you made to others.</p>
      <form id="interestForm">
        <div class="col-sm-4 col-sm-offset-4">
-        <!-- <label display="inline" for="inputInterest">$</label>
-        <input type="text" class="form-control" display="inline" id="inputInterest"> -->
-      <div class="input-group">
-          <div class="input-group-addon" for="inputInterest">$</div>
-          <input type="text" class="form-control" id="inputInterest" name="inputInterest">
-        </div>
-
-
+        <label display="inline" for="inputInterest">$</label>
+        <input type="text" class="form-control inputInterest animated zoomIn" display="inline" id="inputInterest">
       </div>
     </form>
   </div>
    <div class="emptyDiv" style="height: 100%">
-  <img id="on"class="img-responsive progressbar1" src="/img/progressbar1.png">
-  <a href="#modal1" class="backBtn5 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal1" class="backBtn5 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
     <a href="#modal2" class="centerBtn5 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
    <a href="#modal2" class="nextBtn5 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
   </div>
@@ -171,19 +166,13 @@
     <!-- <p class="flow-text center">This includes any interest you received from bank accounts, or from loans you made to others.</p> -->
      <form id="unemploymentForm">
        <div class="col-sm-4 col-sm-offset-4">
-      <!--   <label display="inline" for="inputUnemp">$</label>
-        <input type="text" class="form-control" display="inline" id="inputUnemp">
-      </div> -->
-    <div class="input-group">
-          <div class="input-group-addon" for="inputUnemp">$</div>
-          <input type="text" class="form-control" id="inputUnemp" name="inputUnemp">
-        </div>
-
+        <label display="inline" for="inputUnemp">$</label>
+        <input type="text" class="form-control animated zoomIn" display="inline" id="inputUnemp">
+      </div>
     </form>
   </div>
    <div class="emptyDiv" style="height: 100%">
-    <img id="on"class="img-responsive progressbar1" src="/img/progressbar1.png">
-    <a href="#modal1" class="backBtn6 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal1" class="backBtn6 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
     <a href="#modal2" class="centerBtn6 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
    <a href="#modal2" class="nextBtn6 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
   </div>
@@ -198,15 +187,16 @@
     <!-- <h4 class="flow-text center">Boom</h4> -->
     <p id="alaskaQuestion" class="blueText flow-text center">Did you receive any Alaska Permanent Fund dividends in 2015?</p>
   </div>
-  <div class="blueLine center"></div>
-       <img class="hoverable" src="/img/alaska.png">
+  <div class="blueLine center"><img class="alaska" src="/img/alaska.png"></div>
+    
+
 
   <div class="yourName row">
     <!-- <p class="flow-text center">This includes any interest you received from bank accounts, or from loans you made to others.</p> -->
      <form id="alaskaForm">
        <div class="col-sm-4 col-sm-offset-4">
         <label display="inline" for="inputAlaska">$</label>
-        <input type="text" class="form-control" display="inline" id="inputAlaska">
+        <input type="text" class="form-control animated zoomIn" display="inline" id="inputAlaska">
       </div>
     </form>
   </div>
@@ -231,8 +221,9 @@
     <p class="flow-text center">We're almost done entering your income information. <br> Just a couple more questions about your filing status.</p>
   </div>
    <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn8 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn8 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+      <img id="on"class="img-responsive progressbar animated flipInX" src="/img/progressbar2.png">
+      <a href="#modal1" class="backBtn8 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+      <a href="#modal2" class="nextBtn8 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
   </div>
 </div>
 
