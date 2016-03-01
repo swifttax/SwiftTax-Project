@@ -229,6 +229,513 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 	position: relative;
 	top: 4rem;
 }
+.main{
+    margin-top: 1%;
+}
+.flow-text{
+    line-height: 1.3;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: rgba(0,0,0,0.87);
+}
 
+.blueText {
+    color:#0082C3; 
+    font-weight: normal;
+}
 
+.blueLine2 {
+    width: 100%;
+    height: 10px;
+    border-top: 1px solid #0082C3;
+    margin: 0px auto;
+
+}
+
+.indeed {
+    width: 14%;
+    margin: 0px auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -10px;
+}
+
+.jobMap {
+    width: 55%;
+    height: 300px;
+    background: #0082C3;
+    margin: 0px auto;
+}
+
+.jobBoxes {
+    margin: 0px auto;
+    margin-top: 2%;
+}
+
+.box1,
+.box2,
+.box3 {
+    border: 1px solid #42A5F5;
+    border-radius: 8px;
+    padding: 2%;
+    /*margin-bottom: 2%;*/
+    margin: 0px auto;
+
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+}
+
+.box1,
+.box2,
+.box3{
+    margin:4%;
+}
+
+.box1{
+    margin-left: 5%;
+}
+
+.marker{
+    margin: 0px auto;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #42E035;
+    text-align: center;
+    letter-spacing: .5px;
+
+    /*transition: .2s ease-out;*/
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 1rem;
+    text-transform: none;
+
+    transition: .2s ease-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #7DFF5F;
+}
+
+.jobApiData {
+      font-size: 20px;
+      margin: 0px;
+      margin-bottom: 15px;
+      /*text-decoration: underline;*/
+      font-family: "Roboto", "sans-serif";
+      font-weight: light;
+}
+.dataUnderline {
+      height: 1px;
+      width: 120px;
+      margin: 0px auto;
+      border-bottom: 1px solid black;
+
+}
+.dataType {
+      font-family: "Roboto", "sans-serif";
+      font-style: italic;
+      margin: 0px;
+      font-weight: lighter;
+
+    }
+.jobTitle {
+      /*text-decoration: underline;*/
+      font-weight: bolder;
+      color: black;
+    }
+.oweText {
+      font-weight: 700;
+    color: red;
+    font-size: 60px;
+}
+
+#returnOwePage {
+    z-index: 1007;
+    height: 80%;
+    width: 80%;
+}
+
+#armedForcesQuestion {
+    padding: 0 50px;
+    margin-top: -20px;
+
+}
+
+.centerText14 {
+    padding: 0 50px;
+    margin-top: -40px
+}
+#modal17, #modal19 {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    position: 0;
+}
+
+ #map {
+        height: 500px;
+        width: 800px;
+        margin: 20px auto;
+      }
+      .center {
+      text-align: center;
+    }
+
+    .jobBox {
+      height: 300px;
+      width: 200px;
+      background-color: #BADBF5;
+      background-image: -webkit-linear-gradient(top, #BADBF5 0%, #42A5F5 100% );
+      border: 1px solid green;
+      border-radius: 7px;
+      margin: 100px;
+    }
+    .dataType {
+      font-family: "Roboto", "sans-serif";
+      font-style: italic;
+      margin: 0px;
+      font-weight: lighter;
+
+    }
+    .next-button {
+      color: white;
+      background-color: #42E035;
+      border-radius: 7px;
+      text-transform: none;
+    }
+    .jobBoxLetter {
+      border: 1px solid black;
+      width: 18px;
+      margin: 20px auto;
+      background-color: darkgreen;
+      color: white;
+      border-radius: 5px;
+    }
+    .jobApiData {
+      font-size: 20px;
+      margin: 0px;
+      margin-bottom: 15px;
+      /*text-decoration: underline;*/
+      font-family: "Roboto", "sans-serif";
+      font-weight: light;
+
+    }
+    .jobTitle {
+      /*text-decoration: underline;*/
+      font-weight: bolder;
+    }
+
+    .applyBtn {
+      margin-top: 20px;
+    }
+
+    .dataUnderline {
+      height: 1px;
+      width: 120px;
+      margin: 0px auto;
+      border-bottom: 1px solid black;
+
+    }
+
+    .main{
+  margin-top: 1%;
+}
+.flow-text{
+  line-height: 1.3;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: rgba(0,0,0,0.87);
+}
+
+.blueText {
+  color:#0082C3; 
+  font-weight: normal;
+}
+
+.blueLine2 {
+    width: 100%;
+    height: 10px;
+    border-top: 1px solid #0082C3;
+    margin: 0px auto;
+
+}
+
+.indeed {
+  width: 14%;
+  margin: 0px auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  top: 0px;
+  display: inline;
+}
+
+#map {
+  width: 70%;
+  height: 400px;
+  background: #0082C3;
+  margin: 0px auto;
+}
+
+.jobBoxes {
+  margin: 0px auto;
+  /*margin-top: 2%;*/
+}
+
+.box1,
+.box2,
+.box3 {
+  border: 1px solid #42A5F5;
+  border-radius: 8px;
+  padding: 3%;
+  /*margin-bottom: 2%;*/
+  margin: 20px 20px;
+
+  -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+}
+
+.box1{
+  margin-left: 5%;
+}
+
+.marker{
+  margin: 0px auto;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #42E035;
+    text-align: center;
+    letter-spacing: .5px;
+
+    /*transition: .2s ease-out;*/
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 1rem;
+    text-transform: none;
+
+    transition: .2s ease-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #7DFF5F;
+}
+
+.jobApiData {
+      font-size: 20px;
+      margin: 0px;
+      /*text-decoration: underline;*/
+      font-family: "Roboto", "sans-serif";
+      font-weight: light;
+}
+.dataUnderline {
+      height: 1px;
+      width: 120px;
+      margin: 0px auto;
+      border-bottom: 1px solid black;
+
+}
+.dataType {
+      font-family: "Roboto", "sans-serif";
+      font-style: italic;
+      margin: 0px;
+      font-weight: lighter;
+
+    }
+.jobTitle {
+      /*text-decoration: underline;*/
+      font-weight: bolder;
+      color: black;
+    }
+.oweText {
+    font-weight: 700;
+    color: red;
+    font-size: 60px;
+}
+.noMargin {
+  margin: 0px;
+}
+
+.topRow {
+  margin: 20px;
+}
+
+.downloadBtn {
+  margin-top: 40px;
+
+  background-color: #2164F3;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  padding: 10px;
+}
+ 
+.downloadBtn:hover{
+ background-color: #42A5F5;
+}
+
+.exitBtn {
+    background-color: red;
+ 
+}
+#exitBtn1 {
+    margin: 40px 100px;
+}
+
+/*Amazon*/
+
+.main{
+    margin-top: 1%;
+}
+.flow-text{
+    line-height: 1.3;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: rgba(0,0,0,0.87);
+}
+
+.blueText {
+    color:#0082C3; 
+    font-weight: normal;
+}
+
+.blueLine2 {
+    width: 70%;
+    height: 10px;
+    border-top: 1px solid #0082C3;
+    margin: 0px auto;
+
+}
+
+.amazon {
+    width: 65%;
+    margin: 0px auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    top: 0px;
+}
+
+.jobMap {
+    width: 55%;
+    height: 300px;
+    background: #0082C3;
+    margin: 0px auto;
+}
+
+.jobBoxes {
+    margin: 0px auto;
+    margin-top: 2%;
+}
+
+.box1,
+.box2,
+.box3 {
+    border: 1px solid #42A5F5;
+    border-radius: 8px;
+    padding: 1%;
+    /*margin-bottom: 2%;*/
+    margin: 0px auto;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+}
+
+.box1,
+.box2,
+.box3{
+    margin:2%;
+    margin-top: 0;
+}
+
+.amazon-img{
+    margin: 0px auto;
+    height: 90px;
+    width: 181px;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #42E035;
+    text-align: center;
+    letter-spacing: .5px;
+
+    /*transition: .2s ease-out;*/
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 1rem;
+    text-transform: none;
+
+    transition: .2s ease-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #7DFF5F;
+}
+
+.refundAmt {
+    font-size: 80px;
+    color: #42E035 ;
+    font-weight: bolder;
+}
+
+.amazonText {
+    color: black;
+}
+
+.amazonRow {
+    padding: 1%;
+    margin-bottom: 0px;
+}
+
+.amazonAwesome {
+    height: 100%;
+    margin-top: 5%
+}
+
+.outerBox {
+    margin: 10px;
+}
+
+.margin5 {
+    margin-top: 20%
+}
+
+.downloadBtn {
+  margin-top: 40px;
+
+  background-color: #2164F3;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  padding: 10px;
+}
+.downloadBtn:hover{
+ background-color: #42A5F5;
+}
+
+.exitBtn {
+    background-color: red;
+ 
+}
+#exitBtn2 {
+    margin: 40px 0px;
+}
 
