@@ -10,41 +10,23 @@ $("#combatPay").hide();
 $(".nextBtn15").hide();
 $("#returnOwePage").hide();
 
-(function($){
-  $.fn.gdocsViewer = function(options) {
-  
-    var settings = {
-      width  : '600',
-      height : '700'
-    };
-    
-    if (options) { 
-      $.extend(settings, options);
-    }
-    
-    return this.each(function() {
-      var file = $(this).attr('href');
-      var ext = file.substring(file.lastIndexOf('.') + 1);
-
-      if (/^(tiff|pdf|ppt|pps|doc|docx)$/.test(ext)) {
-        $(this).after(function () {
-          var id = $(this).attr('id');
-          var gdvId = (typeof id !== 'undefined' && id !== false) ? id + '-gdocsviewer' : '';
-          return '<div id="' + gdvId + '" class="gdocsviewer"><iframe src="http://docs.google.com/viewer?embedded=true&url=' + encodeURIComponent(file) + '" width="' + settings.width + '" height="' + settings.height + '" style="border: none;"></iframe></div>';
-        })
-      }
-    });
-  };
-})( jQuery );
-
 $(document).ready(function(){
 
  $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
+  });
 
-      in_duration: 300, // Transition in duration
-      out_duration: 200, // Transition out duration
+ // Kickoff button makes swift tax div, form and button disappear
+
+  $(".kickoff").click(function(){
+    $(".main").addClass('animated zoomOut');
+  });
+
+  $("#modal2").hide();
+  $("#modal1NextBtn").click(function(){
+      $("#modal1").hide();
+      $("#modal2").show();
   });
 
   var inputName;
@@ -112,7 +94,7 @@ $(document).ready(function(){
   });
   $(".centerBtn5").click(function(){
     $('.centerBtn5').hide();
-    $("#interestForm").slideDown(1500);
+    $("#interestForm").slideDown(0);
     $(".nextBtn5").text("Continue");
     $("#interestQuestion").text("Enter your total taxable interest.");
   });
@@ -134,7 +116,7 @@ $(document).ready(function(){
   });
   $(".centerBtn6").click(function(){
     $('.centerBtn6').hide();
-    $("#unemploymentForm").slideDown(1500);
+    $("#unemploymentForm").slideDown(0);
     $(".nextBtn6").text("Continue");
     $("#unemployQuestion").text("Enter your total unemployment compensation received in 2015.");
   });
@@ -153,8 +135,9 @@ $(document).ready(function(){
   });
   $(".centerBtn7").click(function(){
     $('.centerBtn7').hide();
-    $("#alaskaForm").slideDown(1500);
+    $("#alaskaForm").slideDown(0);
     $(".nextBtn7").text("Continue");
+    $(".alaska").hide();
     $("#alaskaQuestion").text("Enter your total Alaska Permanent Fund dividends received in 2015.");
   });
     $(".nextBtn8").click(function(){
@@ -253,14 +236,6 @@ $(document).ready(function(){
       $("#armedForcesQuestion").html("");
       $("#armedForcesQuestion").text("");
   });
-  // $(".nextBtn16").click(function(){
-  //   $('#modal16').closeModal({out_duration: 0,});
-  //   $('#modal17').openModal({in_duration: 0,});
-    // $('.lean-overlay').hide();
-    // $('nav').hide();
-    // $('.navbar-fixed').hide();
-    // $('.get-started').hide();
-    // $('.container').hide();
 
       $(".nextBtnOwe").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
@@ -279,15 +254,9 @@ $(document).ready(function(){
   });
 
 $("#downloadBtn").click(function(){
-  // $('a.embed').gdocsViewer({ width: 400, height: 500 });
-  // $('#modal17').closeModal({out_duration: 0,});
-  // $('#modal18').openModal({in_duration: 0,});
   open("save.pdf");
 });
 $("#downloadBtn2").click(function(){
-  // $('a.embed').gdocsViewer({ width: 400, height: 500 });
-  // $('#modal17').closeModal({out_duration: 0,});
-  // $('#modal18').openModal({in_duration: 0,});
   open("save.pdf");
 });
 $("#exitBtn1").click(function(){
@@ -313,7 +282,6 @@ $(".backBtn20").click(function(){
       $('#modal19').openModal({out_duration: 0,});
   });
 // Indeed API //
-
 
       var markersArray = [];
       var jobLatLng;
@@ -341,7 +309,6 @@ $(".backBtn20").click(function(){
           });
         };
         initMap();
-
 
       function xmlToJson(xml) {
         var obj = {};
@@ -388,12 +355,7 @@ $(".backBtn20").click(function(){
           var jobsArray = jobsJson.response.results.result;
           map.panTo(currentLatLng);
           map.setZoom(10);
-          // var homeImg = 'BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE';
-          // var infowindow = new google.maps.InfoWindow({
-          //   map: map,
-          //   position: currentLatLng,
-          //   content: "You are here."
-          // });
+ 
           jobsArray.forEach(function(element,index){
             console.log(index);
             console.log("______________________");
@@ -408,17 +370,6 @@ $(".backBtn20").click(function(){
             $("#posted" + index).text(element.formattedRelativeTime);
             $("#applyBtn" + index).prop("bacon", element.url);
             console.log($(".box" + index).prop("bacon"));
-            // $("#applyBtn" + index).attr("bacon", element.url);
-            //  console.log($(".box" + index).attr("bacon"));
-
-            
-
-
-
-            // var currentLatLng = {
-            //   lat: 29.424122, 
-            //   lng: -98.493629
-            // }
             
             jobLatLng = {
               lat: parseFloat(element.latitude),
@@ -440,7 +391,6 @@ $(".backBtn20").click(function(){
                 title = "C"
               }
              
-            
             marker = new google.maps.Marker({
               map: map,
               draggable: false,
@@ -448,11 +398,7 @@ $(".backBtn20").click(function(){
               position: jobLatLng,
               icon: letterIcon
             });
-            // markersArray.push(marker); 
-            // console.log(markersArray);
         })
-
-// $("body").on("click", ".deleteBtn",function(){
 
 $("body").on("click", "#applyBtn0", function(){
     open($("#applyBtn0").prop("bacon"));

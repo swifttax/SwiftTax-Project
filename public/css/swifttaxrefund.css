@@ -21,8 +21,8 @@
 
 }
 
-.indeed {
-	width: 14%;
+.amazon {
+	width: 8%;
 	margin: 0px auto;
 	border-radius: 5px;
 	margin-bottom: 5px;
@@ -39,25 +39,28 @@
 
 .jobBoxes {
 	margin: 0px auto;
+	margin-top: 2%;
 }
+
 .box1,
 .box2,
 .box3 {
 	border: 1px solid #42A5F5;
 	border-radius: 8px;
-	padding: 0px;
+	padding: 2%;
 	/*margin-bottom: 2%;*/
 	margin: 0px auto;
-
-	-webkit-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: 1;
 }
 
-.box1{
-	margin-left: 5%;
+.box1,
+.box2,
+.box3{
+	margin:4%;
 }
 
-.marker{
+.amazon-img{
 	margin: 0px auto;
 }
 
@@ -85,35 +88,3 @@
 }
 
 
-.jobApiData {
-      font-size: 20px;
-      margin: 0px;
-      margin-bottom: 15px;
-      /*text-decoration: underline;*/
-      font-family: "Roboto", "sans-serif";
-      font-weight: light;
-}
-.dataUnderline {
-      height: 1px;
-      width: 120px;
-      margin: 0px auto;
-      border-bottom: 1px solid black;
-
-}
-.dataType {
-      font-family: "Roboto", "sans-serif";
-      font-style: italic;
-      margin: 0px;
-      font-weight: lighter;
-
-    }
-.jobTitle {
-      /*text-decoration: underline;*/
-      font-weight: bolder;
-      color: black;
-    }
-.oweText {
-      font-weight: 700;
-    color: red;
-    font-size: 60px;
-}
