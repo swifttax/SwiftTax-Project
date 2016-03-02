@@ -370,7 +370,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 .centerText14 {
     padding: 0 50px;
-    margin-top: -40px
+    margin-top: 0px
 }
 #modal17, #modal19 {
     max-height: 100%;
@@ -751,4 +751,20 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     -webkit-animation-duration: 1.2s;
     -webkit-animation-delay: .1s;
     -webkit-animation-iteration-count: 1;
+}
+
+.noLineHeight {
+  line-height: 0px;
+  width: 70%;
+  display: inline;
+  font-weight: bolder;
+  color: black;
+}
+
+.answerBorder {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: green;
+  padding: 5px;
+  margin: 10px;
 }

@@ -1,6 +1,6 @@
 
 $("#modal17").css("top","0");
-$(".nextBtn1").fadeOut();
+$(".nextBtn1").hide();
 $("#validNameCheck").hide();
 $("#interestForm").hide();
 $("#unemploymentForm").hide();
@@ -11,22 +11,16 @@ $(".nextBtn15").hide();
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
-
+$("#validNameCheck").hide();
+$("#on").hide();
+$(".nextBtn1").hide();
  $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
   });
 
- // Kickoff button makes swift tax div, form and button disappear
-
   $(".kickoff").click(function(){
     $(".main").addClass('animated zoomOut');
-  });
-
-  $("#modal2").hide();
-  $("#modal1NextBtn").click(function(){
-      $("#modal1").hide();
-      $("#modal2").show();
   });
 
   var inputName;
@@ -40,6 +34,7 @@ $(document).ready(function(){
     }
     if (($("#inputFirstName").val().length < 2)) {
       $(".nextBtn1").fadeOut(1000).css("transition: ''");
+       $("#validNameCheck").show() 
     }
     if (!((/[A-Z]/ig).test($("#inputFirstName").val()))) {
       $("#validNameCheck").show() 
@@ -51,6 +46,10 @@ $(document).ready(function(){
     $("#inputNameValue").text("Thanks " + inputName + "!")
     $('#modal1').closeModal({out_duration: 200,});
     $('#modal2').openModal({in_duration: 200,});
+    setTimeout(function(){
+       $("#on").show();
+    },400)
+   
   });
   $(".nextBtn2").click(function(){
     $('#modal2').closeModal({out_duration: 0,});
@@ -164,8 +163,9 @@ $(document).ready(function(){
   $(".centerBtn9").click(function(){
   });
     $(".nextBtn10").click(function(){
+      console.log("clicked modal 10");
     $('#modal10').closeModal({out_duration: 0,});
-    $('#modal11').openModal({in_duration: 0,}); 
+    $('#modal15').openModal({in_duration: 0,}); 
   });
     $(".backBtn10").click(function(){
       $('#modal10').closeModal({out_duration: 0,});
