@@ -379,6 +379,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin: 0;
     padding: 0px;
     position: 0;
+    top: 0; 
 }
 
  #map {
@@ -663,8 +664,9 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 .amazon-img{
     margin: 0px auto;
-    height: 90px;
-    width: 181px;
+    max-height: 100%;
+    width: auto;
+    margin-top: 10%;
 }
 
 .btn, .btn-large {
@@ -698,6 +700,8 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 .amazonText {
     color: black;
+    font-weight: 600;
+    font-size: 1.5rem
 }
 
 .amazonRow {
@@ -767,4 +771,27 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   background-color: green;
   padding: 5px;
   margin: 10px;
+}
+
+#rating0 , #rating1, #rating2 {
+  width: 77px;
+  margin-left: 38%;
+  margin-top: 2%;
+  margin-bottom: 12%
+}
+
+#refreshBtn {
+  background-color: #42E035;
+}
+
+#url0, #url1, #url2 {
+  margin-top: 12%
+}
+
+#bigDiv {
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  opacity: 1;
+  background-color: orange;
 }

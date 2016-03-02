@@ -13,9 +13,11 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKYj_O-hmy5dWj8WcUYkYQL1Bq2tCwA3Y"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
  <script src="js/swifttaxrefund.js"></script>
   <script src="js/swifttaxowe.js"></script>
   <script src="js/swifttax.js"></script>
+    <script src="js/materializeFull.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta charset="UTF-8">
@@ -27,6 +29,7 @@
 </head>
 
 <body>
+
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
@@ -39,6 +42,9 @@
   </div>
 
   <div class="container main">
+      <div id="bigDiv">
+
+</div>
     <p class="flow-text center get-started animated fadeInDown">Your fastest tax return is only clicks away.
       <a class="waves-effect waves-light btn modal-trigger kickoff" href="#modal1">Get Started</a>
     </p>
@@ -405,7 +411,7 @@
 <!--//////// -->
 <!-- Return Owe Page -->
 <!-- /////// -->
-<div id="modal17" class="modal modal-fixed" style="top:0">
+<div id="modal17" class="modal" style="top:0">
   <div class="modal-content"> 
   <div id="everything"> 
       <div class="row topRow">
@@ -504,7 +510,7 @@
 <!--//////// -->
 <!-- Refund Page -->
 <!-- /////// -->
-<div id="modal19" class="modal modal-fixed" style="top:0">
+<div id="modal19" class="modalFull" style="top:0">
   <div class="modal-content"> 
     <div id="everything"> 
         <div class="outerBox">
@@ -643,5 +649,13 @@
   </div>
 </div>
 
+<!-- big div -->
+<div id="giantDiv" style="height: 900px, width: 100%, background-color: orange">
+</div>
+
+<script type="text/javascript">
+// $("#modal19").css("top","0%");
+// $("#modal17").css("top",0%);
+</script>
 </body>
 </html>

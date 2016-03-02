@@ -11,6 +11,8 @@ $(".nextBtn15").hide();
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
+// $("#modal19").hide();
+$("#modal17").css("top","0%");
 $("#validNameCheck").hide();
 $("#on").hide();
 $(".nextBtn1").hide();
@@ -239,12 +241,16 @@ $(".nextBtn1").hide();
 
       $(".nextBtnOwe").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
+    $("#modal17").css("top","0")
+    
     $('#modal17').openModal({in_duration: 0,});
+    $("#modal17").css("top","0");
     // $('.lean-overlay').hide();
 });
       $(".nextBtnRefund").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
-    $('#modal19').openModal({in_duration: 0,});
+    $('#modal19').openModalFull({in_duration: 0,});
+    $("#modal19").css("top","0%");
     // $('.lean-overlay').hide();
 
   });
@@ -252,7 +258,9 @@ $(".nextBtn1").hide();
       $('#modal16').closeModal({out_duration: 0,});
       $('#modal15').openModal({in_duration: 0,});
   });
-
+$("#refreshBtn").click(function(){
+  amazonRequest();
+});
 $("#downloadBtn").click(function(){
   open("save.pdf");
 });
@@ -418,6 +426,101 @@ $("body").on("click", "#applyBtn2", function(){
 
 
   
+});
+// Amazon API Call //
+
+var myDataRef = new Firebase("https://swifttax-amazon-db.firebaseio.com/");
+var data;
+var basket = [];
+var refund = 5000.43;
+var randomFirst;
+var randomSecond;
+var randomThird;
+var remainingRefund2;
+var remainingRefund3;
+
+myDataRef.on('value', function(snapshot) {
+  data = snapshot.val();
+  console.log(data);
+  console.log(data.length)
+  function pickRandomFirst(){
+    randomFirst = Math.floor((Math.random()*(data.length - 1))+1);
+    console.log(randomFirst);
+    console.log(basket);
+    basket.push(randomFirst);
+  }
+  function pickRandomSecond(){
+     randomSecond = Math.floor((Math.random()*(data.length - 1))+1)
+  };
+  function pickRandomThird(){
+     randomThird = Math.floor((Math.random()*(data.length - 1))+1)
+  };
+  function pickSecondItem(){
+    remainingRefund2 = (refund - (data[randomFirst].price)).toFixed(2);
+    if (basket.length < 3) {
+        pickRandomSecond();
+        if (randomSecond != randomFirst) {
+          if ((remainingRefund2 - data[randomSecond].price) > 10){
+            if ((remainingRefund2 - data[randomSecond].price) < 4000){
+              basket.push(randomSecond);
+              return
+            }
+            else {
+              pickSecondItem();
+            }
+          }
+          else {
+            pickSecondItem();
+          }
+        }
+        else {
+          pickSecondItem();
+        }     
+    }
+  };
+  function pickThirdItem(){
+    remainingRefund3 = (refund - ((data[randomFirst].price) + data[randomSecond].price)).toFixed(2);
+    if (basket.length < 3) {
+        pickRandomThird();
+        if (randomThird != (randomFirst || randomSecond)) {
+          if ((remainingRefund3 - data[randomThird].price) > 0){
+              if (((remainingRefund3 - data[randomThird].price) < 1000)|| ((remainingRefund3 - data[    randomThird].price) > 6000)) {
+                  
+                  basket.push(randomThird);
+                  console.log("remainFinal " + (refund-((parseFloat(data[basket[0]].price) + parseFloat(data[basket[1]].price) + parseFloat(data[basket[2]].price)))));
+                 
+                  console.log("items: " + data[basket[0]].name + data[basket[1]].name + data[basket[2]].name)
+                  
+                  return
+              }
+              else {
+                pickThirdItem();
+                
+              }
+            return
+          }
+          else {
+            pickThirdItem();
+          }
+        }
+        else {
+          pickThirdItem();
+        }     
+    }
+  };
+  function fillBasket(){
+    pickRandomFirst();
+    console.log(basket);
+    pickSecondItem();
+    console.log(basket);
+    pickThirdItem();
+    console.log(basket);
+    // console.log("remainFinal " + basket[0].price + basket[1].price + basket[2].price)
+    // console.log(basket[0].price + basket[1].price + basket[2].price);
+  };
+
+  fillBasket();
+  console.log(basket);
 });
 
 });
