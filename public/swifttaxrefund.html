@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head profile="http:codeup.dev/swifttax2.html">
+<link rel="icon" href="/img/mini.png" type="image/png"> 
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/swifttaxrefund.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+	<title>Swift Tax</title>
+</head>
+<body>
+  <div class="container main">
+    <p class="flow-text center blueText">Congratulations! You have a refund of</p>
+    	<div class="flow-text center blueText">$ 
+    	<span class="taxesOwed"> <!-- Money owed goes here --> </span></div>
+    	  <div class="blueLine2 center"></div>
+  	
+	<div class="row">
+  		<div class="col-sm-6 col-sm-offset-3 flow-text center">
+  			Here are some awesome items to purchase with your refund at 
+  		</div>
+  </div>
+		<a href ="http://www.amazon.com/" target="_blank">
+  	<img class="img-responsive amazon hoverable" src ="/img/amazon.png"></a>
+
+<!-- //////////// -->
+<!-- Image Slider -->
+<!-- //////////// -->
+<!-- 
+    <div class="slider">
+    <ul class="slides">
+      <li>
+        <img class="hoverable" src="/img/amazon1.png">
+      </li>
+      <li>
+        <img class="hoverable" src="/img/amazon2.png"> 
+      </li>
+      <li>
+        <img class="hoverable" src="/img/amazon3.png"> 
+      </li>
+    </ul>
+  </div> -->
+
+    <div class="col-sm-3 hoverable center blueText box1 animate flipInY boxes">
+        <p class="center">Item 1</p>
+          <img class="img-responsive amazon-img" src="/img/amazon2.png">
+            <a class="waves-effect waves-light btn" href="#">Buy Now!</a>
+      </div>
+        
+        <div class="col-sm-3 hoverable center blueText box2 animate flipInY boxes">
+          <p class="center">Item 2</p>          
+            <img class="img-responsive amazon-img" src="/img/amazon2.png">
+              <a class="waves-effect waves-light btn" href="#">Buy Now!</a>
+      </div>
+        
+        <div class="col-sm-3 hoverable center blueText box3 animate flipInY boxes">
+          <p class="center">Item 3</p>
+            <img class="img-responsive amazon-img" src="/img/amazon3.png">
+          <a class="waves-effect waves-light btn" href="#">Buy Now!</a>
+        </div>
+
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script src="js/swifttaxrefund.js"></script>
+</body>
+</html>

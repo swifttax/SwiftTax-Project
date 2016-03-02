@@ -19,6 +19,19 @@ $(document).ready(function(){
     
   });
 
+ // Kickoff button makes swift tax div, form and button disappear
+
+ $(".kickoff").click(function(){
+  $(".main").addClass('animated zoomOut');
+
+});
+
+  $("#modal2").hide();
+  $("#modal1NextBtn").click(function(){
+      $("#modal1").hide();
+      $("#modal2").show();
+  });
+
   var inputName;
 
   $("#inputFirstName").keyup(function(){
@@ -35,6 +48,24 @@ $(document).ready(function(){
       $("#validNameCheck").show() }
 
   });
+
+  // function blink(id, interval) {
+  //   var on = $('#' + id);
+  //   var off = $('#un' + id);
+  
+  // !function blinking() {
+  //   on.toggle();
+  //   off.toggle();
+  //   setTimeout(blinking, interval);
+  // }()
+
+  // function blinking() {
+  //   on.show();
+  //   off.hide();
+  // }
+// };
+
+// blink('on', 1000);
 
 
 	$(".nextBtn1").click(function(){
@@ -85,7 +116,7 @@ $(document).ready(function(){
   });
   $(".centerBtn5").click(function(){
     $('.centerBtn5').hide();
-    $("#interestForm").slideDown(1500);
+    $("#interestForm").slideDown(0);
     $(".nextBtn5").text("Continue");
     $("#interestQuestion").text("Enter your total taxable interest.");
   });
@@ -107,7 +138,7 @@ $(document).ready(function(){
   });
   $(".centerBtn6").click(function(){
     $('.centerBtn6').hide();
-    $("#unemploymentForm").slideDown(1500);
+    $("#unemploymentForm").slideDown(0);
     $(".nextBtn6").text("Continue");
     $("#unemployQuestion").text("Enter your total unemployment compensation received in 2015.");
   });
@@ -126,8 +157,9 @@ $(document).ready(function(){
   });
   $(".centerBtn7").click(function(){
     $('.centerBtn7').hide();
-    $("#alaskaForm").slideDown(1500);
+    $("#alaskaForm").slideDown(0);
     $(".nextBtn7").text("Continue");
+    $(".alaska").hide();
     $("#alaskaQuestion").text("Enter your total Alaska Permanent Fund dividends received in 2015.");
   });
     $(".nextBtn8").click(function(){
@@ -197,22 +229,11 @@ $.get(jobUrl, {
   .done(function(data){
     console.log(data);
     console.log(data.childNode[0]);
-  })
+  });
 
- });
 
-// Kickoff button makes swift tax div, form and button disappear
 
-	$(".kickoff").click(function(){
-	$(".main").addClass('animated zoomOut');
 
-});
-
-	$("#modal2").hide();
-	$("#modal1NextBtn").click(function(){
-  		$("#modal1").hide();
-  		$("#modal2").show();
-	});
       
 
 
