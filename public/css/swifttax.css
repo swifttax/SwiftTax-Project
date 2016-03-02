@@ -220,6 +220,12 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     margin: 0px auto;
 
 }
+
+.separate {
+  margin-bottom: 7%;
+  margin-top: 7%;
+
+}
 /*//////////////////////////////////////////////////////////////*/
 /*Positiong to first modal, may need to add to all modal classes*/
 /*//////////////////////////////////////////////////////////////*/
@@ -688,6 +694,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 }
 
+.hoverable {
+  border-radius: 5px;
+}
+
 .btn:hover, .btn-large:hover {
     background-color: #7DFF5F;
 }
@@ -773,6 +783,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   margin: 10px;
 }
 
+<<<<<<< HEAD
 #rating0 , #rating1, #rating2 {
   width: 77px;
   margin-left: 38%;
@@ -788,10 +799,31 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   margin-top: 12%
 }
 
-#bigDiv {
-  height: 100%;
-  width: 100%;
-  z-index: 5000;
-  opacity: 1;
-  background-color: orange;
+.bigMac{
+    margin: 0px auto;
+    margin-top: 8%;
+}
+
+.videoContainer {
+  max-height: 0px;
+}
+
+.fullscreen-bg {
+    /*position: fixed;*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: relative;
+    top: -526px;
+    left: 0;
+    width: 64.39%;
+    height: 10%;
+    opacity: .7;
+    margin: 0px auto;
 }
