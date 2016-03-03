@@ -1,5 +1,5 @@
 
-$("#modal17").css("top","0");
+
 $(".nextBtn1").hide();
 $("#validNameCheck").hide();
 $("#interestForm").hide();
@@ -7,14 +7,33 @@ $("#unemploymentForm").hide();
 $(".centerText14").hide();
 $("#armedForcesForm").hide();
 $("#combatPay").hide();
-$(".nextBtn15").hide();
+
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
-// $("#modal19").hide();
-$("#modal17").css("top","0%");
+ // $('#fullpage').fullpage();
+$("#armedForcesQuestion0").hide();
+$("#flagDiv").hide();
+$(".nextBtn1").hide();
+$("#validNameCheck").hide();
+$("#interestForm").hide();
+$("#unemploymentForm").hide();
+$(".centerText14").hide();
+$("#armedForcesForm").hide();
+$("#combatPay").hide();
+$("#returnOwePage").hide();
+$("#text_16_1").hide();
+$("#text_16_2").hide();
+$("#text_16_3").hide();
+$("#text_16_4").hide();
+$("#modal19").hide();
+$("#modal17").hide();
 $("#validNameCheck").hide();
 $("#on").hide();
+$(".nextBtnOwe").hide();
+$(".nextBtnRefund").hide();
+$(".backBtn16").hide();
+
 $(".nextBtn1").hide();
  $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -46,8 +65,8 @@ $(".nextBtn1").hide();
 	$(".nextBtn1").click(function(){
     inputName = $.trim($("#inputFirstName").val())
     $("#inputNameValue").text("Thanks " + inputName + "!")
-    $('#modal1').closeModal({out_duration: 200,});
-    $('#modal2').openModal({in_duration: 200,});
+    $('#modal1').closeModal({out_duration: 0,});
+    $('#modal2').openModal({in_duration: 0,});
     setTimeout(function(){
        $("#on").show();
     },400)
@@ -87,6 +106,7 @@ $(".nextBtn1").hide();
     $('.centerBtn6').show();
     $("#unemploymentForm").hide();
     $(".nextBtn6").text("No");
+    $("#stormDiv").show();
     $("#unemployQuestion").text("Did you receive any unemployment compensation in 2015?");
   });
    $(".backBtn5").click(function(){
@@ -110,12 +130,14 @@ $(".nextBtn1").hide();
    $(".backBtn6").click(function(){
     $('#modal6').closeModal({out_duration: 0,});
     $('#modal5').openModal({in_duration: 0,});
+    $("#stormDiv").show();
     $('.centerBtn5').show();
     $("#interestForm").hide();
     $(".nextBtn5").text("No");
     $("#interestQuestion").text("Did you receive any taxable interest in 2015?");
   });
   $(".centerBtn6").click(function(){
+    $("#stormDiv").hide();
     $('.centerBtn6').hide();
     $("#unemploymentForm").slideDown(0);
     $(".nextBtn6").text("Continue");
@@ -163,11 +185,19 @@ $(".nextBtn1").hide();
     $('#modal8').openModal({in_duration: 0,});
   });
   $(".centerBtn9").click(function(){
+     $('#modal9').closeModal({out_duration: 0,});
+    $('#modal10').openModal({in_duration: 0,}); 
+    $("#doneIncome").text("Congrats, " + inputName + "!")
   });
     $(".nextBtn10").click(function(){
       console.log("clicked modal 10");
     $('#modal10').closeModal({out_duration: 0,});
-    $('#modal15').openModal({in_duration: 0,}); 
+    $('#modal11').openModal({in_duration: 0,}); 
+  });
+     $(".centerBtn10").click(function(){
+      console.log("clicked modal 10");
+    $('#modal10').closeModal({out_duration: 0,});
+    $('#modal11').openModal({in_duration: 0,}); 
   });
     $(".backBtn10").click(function(){
       $('#modal10').closeModal({out_duration: 0,});
@@ -200,32 +230,84 @@ $(".nextBtn1").hide();
  $(".nextBtn14").click(function(){
     $('#modal14').closeModal({out_duration: 0,});
     $('#modal15').openModal({in_duration: 0,}); 
+     $("#modal14").css("background-image","")
+     $("#armedForcesQuestion0").hide();
+      $("#armedForcesQuestion").show();
+      $("#armedForcesQuestion2").text("");
+       $(".centerText14").hide();
+    $("#armedForcesForm").hide();
   });
     $(".backBtn14").click(function(){
       $('#modal14').closeModal({out_duration: 0,});
       $('#modal13').openModal({in_duration: 0,});
+       $("#modal14").css("background-image","")
+        $("#armedForcesQuestion0").hide();
+        $("#armedForcesQuestion").show();
+        $("#armedForcesQuestion2").text("");
+        $(".centerText14").hide();
+    $("#armedForcesForm").hide();
   });
   $(".centerBtn14").click(function(){
+    $("#modal14").css("background-image","url('/img/usFlag.jpg')")
     $('.centerBtn14').hide();
     $(".nextBtn14").text("Continue");
-    $("#armedForcesQuestion").css("color","#42E035");
-    $("#armedForcesQuestion").text("On behalf of a grateful nation, thank you for your service.");
-    $("#armedForcesQuestion").append($("<br>"));
-    $("#armedForcesQuestion").append($("<br>"));
+    $("#armedForcesQuestion").hide();
+    $("#armedForcesQuestion0").show();
     $("#armedForcesQuestion2").text("Enter your Nontaxable Combat Pay Elections, if any.");
     $(".centerText14").show();
     $("#armedForcesForm").show();
   });
-   $("#healthYes").click(function(){
-       $(".nextBtn15").show();
-   });
-  $("#healthNo").click(function(){
-       $(".nextBtn15").show();
-   });
-
-   $(".nextBtn15").click(function(){
+  $(".centerBtn15").click(function(){
     $('#modal15').closeModal({out_duration: 0,});
     $('#modal16').openModal({in_duration: 0,}); 
+     setTimeout(function(){
+      $("#text_16_0").hide();
+      $("#text_16_1").fadeIn();
+    },3000);
+     setTimeout(function(){
+     $("#text_16_1").hide();
+      $("#text_16_2").fadeIn();
+    },6000);
+      setTimeout(function(){
+      $("#text_16_2").hide();
+      $("#text_16_3").fadeIn();
+    },9000);
+      setTimeout(function(){
+      $("#text_16_3").hide();
+      $("#loopGif").hide();
+      $("#text_16_4").fadeIn();
+      $(".nextBtnOwe").fadeIn(2000);
+      $(".nextBtnRefund").fadeIn(2000);
+      $(".backBtn16").fadeIn(2000);
+    },12000);
+   
+    
+    
+
+  });
+   $(".nextBtn15").click(function(){
+   $('#modal15').closeModal({out_duration: 0,});
+    $('#modal16').openModal({in_duration: 0,}); 
+     setTimeout(function(){
+      $("#text_16_0").hide();
+      $("#text_16_1").fadeIn();
+    },3000);
+     setTimeout(function(){
+     $("#text_16_1").hide();
+      $("#text_16_2").fadeIn();
+    },6000);
+      setTimeout(function(){
+      $("#text_16_2").hide();
+      $("#text_16_3").fadeIn();
+    },9000);
+      setTimeout(function(){
+      $("#text_16_3").hide();
+      $("#loopGif").hide();
+      $("#text_16_4").fadeIn();
+      $(".nextBtnOwe").fadeIn(2000);
+      $(".nextBtnRefund").fadeIn(2000);
+      $(".backBtn16").fadeIn(2000);
+    },12000);
   });
     $(".backBtn15").click(function(){
       $('#modal15').closeModal({out_duration: 0,});
@@ -241,26 +323,33 @@ $(".nextBtn1").hide();
 
       $(".nextBtnOwe").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
-    $("#modal17").css("top","0")
-    
-    $('#modal17').openModal({in_duration: 0,});
-    $("#modal17").css("top","0");
+    window.scrollTo(0,0);
+    $(".taxform").hide();
+    $("#coolComputer").hide();
+    $('#modal17').show();
     // $('.lean-overlay').hide();
 });
       $(".nextBtnRefund").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
-    $('#modal19').openModalFull({in_duration: 0,});
-    $("#modal19").css("top","0%");
+    window.scrollTo(0,0);
+    $(".taxform").hide();
+    $("#coolComputer").hide();
+    $('#modal19').show();
+
+    
     // $('.lean-overlay').hide();
 
   });
     $(".backBtn16").click(function(){
       $('#modal16').closeModal({out_duration: 0,});
       $('#modal15').openModal({in_duration: 0,});
+      $("#text_16_0").show();
+      $("#text_16_4").hide();
+      $("#loopGif").show();
+      $(".nextBtnOwe").hide();
+      $(".nextBtnRefund").hide();
+      $(".backBtn16").hide();
   });
-$("#refreshBtn").click(function(){
-  amazonRequest();
-});
 $("#downloadBtn").click(function(){
   open("save.pdf");
 });
@@ -268,26 +357,34 @@ $("#downloadBtn2").click(function(){
   open("save.pdf");
 });
 $("#exitBtn1").click(function(){
-      $('#modal17').closeModal({out_duration: 0,});
+      $('#modal17').hide();
       $('#modal18').openModal({in_duration: 0,});
+
   });
 $(".nextBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
+      $(".taxform").show();
+      $("#coolComputer").show();
   });
 $(".backBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
-      $('#modal17').openModal({out_duration: 0,});
+      $('#modal17').show();
+
   });
 $("#exitBtn2").click(function(){
-      $('#modal19').closeModal({out_duration: 0,});
+      $("#modal19").hide();
       $('#modal20').openModal({in_duration: 0,});
   });
 $(".nextBtn20").click(function(){
       $('#modal20').closeModal({out_duration: 0,});
+      $(".taxform").show();
+      $("#coolComputer").show();
+
   });
 $(".backBtn20").click(function(){
       $('#modal20').closeModal({out_duration: 0,});
-      $('#modal19').openModal({out_duration: 0,});
+      $("#modal19").show();
+
   });
 // Indeed API //
 
@@ -456,73 +553,76 @@ myDataRef.on('value', function(snapshot) {
      randomThird = Math.floor((Math.random()*(data.length - 1))+1)
   };
   function pickSecondItem(){
-    remainingRefund2 = (refund - (data[randomFirst].price)).toFixed(2);
+    remainingRefund2 = (refund - (data[randomFirst].price));
     if (basket.length < 3) {
         pickRandomSecond();
-        if (randomSecond != randomFirst) {
-          if ((remainingRefund2 - data[randomSecond].price) > 10){
-            if ((remainingRefund2 - data[randomSecond].price) < 4000){
+        if ((randomSecond != randomFirst) && ((remainingRefund2 - data[randomSecond].price) > 10)){
               basket.push(randomSecond);
               return
             }
             else {
               pickSecondItem();
             }
-          }
-          else {
-            pickSecondItem();
-          }
-        }
-        else {
-          pickSecondItem();
-        }     
-    }
+    }   
   };
   function pickThirdItem(){
-    remainingRefund3 = (refund - ((data[randomFirst].price) + data[randomSecond].price)).toFixed(2);
+    remainingRefund3 = (refund - ((data[randomFirst].price) + data[randomSecond].price));
     if (basket.length < 3) {
         pickRandomThird();
-        if (randomThird != (randomFirst || randomSecond)) {
-          if ((remainingRefund3 - data[randomThird].price) > 0){
-              if (((remainingRefund3 - data[randomThird].price) < 1000)|| ((remainingRefund3 - data[    randomThird].price) > 6000)) {
-                  
-                  basket.push(randomThird);
-                  console.log("remainFinal " + (refund-((parseFloat(data[basket[0]].price) + parseFloat(data[basket[1]].price) + parseFloat(data[basket[2]].price)))));
-                 
-                  console.log("items: " + data[basket[0]].name + data[basket[1]].name + data[basket[2]].name)
-                  
-                  return
-              }
-              else {
-                pickThirdItem();
-                
-              }
+        if (randomThird != randomSecond){
+            basket.push(randomThird);
+            console.log("remainFinal " + (refund-((parseFloat(data[basket[0]].price) + parseFloat(data[basket[1]].price) + parseFloat(data[basket[2]].price)))));
+           
+            console.log("items: " + data[basket[0]].name + data[basket[1]].name + data[basket[2]].name)
+            
             return
           }
-          else {
-            pickThirdItem();
-          }
-        }
         else {
           pickThirdItem();
         }     
     }
   };
+  
   function fillBasket(){
     pickRandomFirst();
-    console.log(basket);
     pickSecondItem();
-    console.log(basket);
     pickThirdItem();
-    console.log(basket);
-    // console.log("remainFinal " + basket[0].price + basket[1].price + basket[2].price)
-    // console.log(basket[0].price + basket[1].price + basket[2].price);
   };
 
-  fillBasket();
-  console.log(basket);
+
+  function amazonRequest(){
+    fillBasket();
+
+    basket.forEach(function(element, index){
+        $("#amazonText" + index).text(data[basket[index]].name);
+        $("#amazonImg" + index).attr("src", data[basket[index]].image);
+        var ratingUrl = "img/" + data[basket[index]].rating + "star.png";
+        $("#rating" + index).attr("src", ratingUrl);
+        if (data[basket[index]].shipping != 'prime'){
+          $("#shipping" + index).text(data[basket[index]].shipping);
+        }
+        else {
+          $("#shipping" + index).html($('<img>', { 
+          src : "img/primelogo.png",
+          height: 22,
+          width: 77
+        }));
+        }
+        $("#price" + index).text("$" + (data[basket[index]].price).toFixed(2));
+        $("#url" + index).attr("href", data[basket[index]].url );
+    });
+  };
+
+  amazonRequest();
+  
+  $("#refreshBtn").click(function(){
+    basket = []
+     amazonRequest();
+  });
+
 });
 
 });
+
 
     

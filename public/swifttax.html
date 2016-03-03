@@ -17,10 +17,16 @@
   <script src="js/swifttaxowe.js"></script>
   <script src="js/swifttax.js"></script>
     <script src="js/materializeFull.js"></script>
+   <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css"> -->
+    <!-- // <script src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta charset="UTF-8">
- 
+ <style type="text/css">
+.fp-tableCell {
+  vertical-align: top;
+}
+ </style>
   <title>
     Swift Tax
   </title>
@@ -38,404 +44,120 @@
           <li><a class="navlink" href="">About</a></li>
         </ul>
       </div>
+    </nav>
   </div>
 
 
+<!--//////// -->
+<!-- Refund Page -->
+<!-- /////// -->
 
-<div class="macDaddy">
-  <div class="container fullscreen-bg">
-    <img class="bigMac img-responsive" src="/img/mac.png">
-    <p class="flow-text center"> Spend less time filing, and more time pursuing the things you love.
-      <img class="logo" src="/img/logobeach.png">
-    </p>
+<div id="modal19" style="top:0">
+  <div class="modal-content" style="padding: 0px"> 
+    <div id="everything"> 
+        <div class="outerBox">
+    <div class="row">
+      <p id="congratsText" class="flow-text center blueText">Congratulations! You have a refund of</p>
+        <div class="flow-text center blueText refundAmt">$ 
+        <span class="refundAmt"> 5,435.32 </span></div>
+          <div class="blueLine2 center"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 flow-text center amazonAwesome">
+          Here's a selection of awesome items you can purchase with your refund at 
+        <a href ="http://www.amazon.com/" target="_blank">
+      <img  class="img-responsive amazon hoverable" src ="img/amazon.png" width="1400px"></a>
+  
+              <div class="row">
+                <a id="downloadBtn2" class="downloadBtn waves-effect waves-light btn margin5" href="#">View 1040EZ</a>
+              </div>
 
-  </div>
-
-  <div class="container videoContainer">
-    <video loop muted autoplay poster="img/beach2.mp4" class="fullscreen-bg__video img-responsive">
-      <source src="img/beach2.mp4" type="video/webm">
-      <source src="img/beach1.mp4" type="video/webm">
-    </video>
+              <div class="row">
+                <a id="refreshBtn" class="downloadBtn waves-effect waves-light btn margin5" href="#">Refresh Selection</a>
+              </div>
+  
+              <div class="row">
+                <a id="exitBtn2" class="downloadBtn waves-effect waves-light btn exitBtn margin5" href="#">Exit Application</a>
+              </div>
+            </div>
+    <div class="col-sm-8 col-sm-offset-4 hoverable center blueText box1 animate boxes amazonBox1">
+        <div class="row amazonRow">
+          <div class="col-sm-4">
+            <h6 id="amazonText0" class="center amazonText"></h6>
+              <img id="amazonImg0" class="img-responsive amazon-img" src="img/couch.jpg">
+          </div>
+           <div class="col-sm-5">
+                    <p  class="dataType">Customer Rating</p>
+                    <div class="dataUnderline"></div>
+                    <img id="rating0" class="img-responsive" width="77" src="">
+                     <p class="dataType">Shipping</p>
+                    <div class="dataUnderline"></div>
+                    <div id="shipping0" class="jobApiData"></div>
+            </div>
+            <div class="col-sm-3">
+               <p class="dataType">Price</p>
+                    <div class="dataUnderline"></div>
+                     <p id="price0" class="jobApiData"></p>
+              <a id="url0" class="waves-effect waves-light btn" target="_blank" href="#">Buy Now!</a>
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-8 col-sm-offset-4 hoverable center blueText box1 animate boxes amazonBox2">
+        <div class="row amazonRow">
+          <div class="col-sm-4">
+            <h6 id="amazonText1" class="center amazonText">Intex Pull-out Sofa Inflatable Bed</h6>
+              <img id="amazonImg1" class="img-responsive amazon-img" src="img/couch.jpg">
+          </div>
+           <div class="col-sm-5">
+                    <p class="dataType">Customer Rating</p>
+                    <div class="dataUnderline"></div>
+                    <img id="rating1" class="img-responsive" width="77" src="img/couch.jpg">
+                     <p class="dataType">Shipping</p>
+                    <div class="dataUnderline"></div>
+                    <div id="shipping1"  class="jobApiData"></div>
+            </div>
+            <div class="col-sm-3">
+               <p class="dataType">Price</p>
+                    <div class="dataUnderline"></div>
+                     <p id="price1" class="jobApiData">$45.65</p>
+              <a id="url1" class="waves-effect waves-light btn" target="_blank" href="#">Buy Now!</a>
+          </div>
+        </div>
+      </div><div class="col-sm-8 col-sm-offset-4 hoverable center blueText box1 animate boxes amazonBox3">
+        <div class="row amazonRow">
+          <div class="col-sm-4">
+            <h6 id="amazonText2" class="center amazonText">Intex Pull-out Sofa Inflatable Bed</h6>
+              <img id="amazonImg2" class="img-responsive amazon-img" src="img/couch.jpg">
+          </div>
+           <div class="col-sm-5">
+                    <p class="dataType">Customer Rating</p>
+                    <div class="dataUnderline"></div>
+                    <img id="rating2" class="img-responsive" width="77" src="img/couch.jpg">
+                     <p class="dataType">Shipping</p>
+                    <div class="dataUnderline"></div>
+                    <div id="shipping2"  class="jobApiData"></div>
+            </div>
+            <div class="col-sm-3">
+               <p class="dataType">Price</p>
+                    <div class="dataUnderline"></div>
+                     <p id="price2" class="jobApiData">$45.65</p>
+              <a id="url2" class="waves-effect waves-light btn" target="_blank" href="">Buy Now!</a>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 
+</div>
 
-    <div class="blueLine center separate"></div>
-
-
-<div class="container taxform">
-    <p class="flow-text center get-started animated fadeInDown">Your fastest tax return is only clicks away.
-      <a class="waves-effect waves-light btn modal-trigger kickoff" href="#modal1">Get Started</a>
-    </p>
-    <img class="img-responsive swifttaxform animated fadeInDown" src="/img/swifttaxform.png">
-  </div>
-
-    <div class="blueLine center separate"></div>
-
-
-
-<!-- ///////////////////////////////////////////// -->
-<!-- Modal Structure, this is the head of the Modal-->
-<!-- ///////////////////////////////////////////// -->
-
-<div id="modal1" class="modal modal-fixed">
-  <div class="modal-content">
-    <h4 class="flow-text center"></h4>
-    <p class="blueText flow-text center">Let's get started by getting to know you.</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">What is your first name?</p>
-    <div class="col-sm-4 col-sm-offset-4">
-      <input type="text" class="form-control" id="inputFirstName">
-      <p id="validNameCheck" class="shake animated">Please enter a valid name</p>
     </div>
   </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal2" class="nextBtn1 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-
-<!--//////// -->
-<!-- Modal 2 -->
-<!-- /////// -->
-
-<div id="modal2" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="inputNameValue" class="blueText flow-text center"></p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">You're just a few short steps away from completing your 2015 Tax Return.</p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-      <img id="on"class="img-responsive progressbar animated flipInX" src="img/progressbar1.png">
-
-   <a href="#modal1" class="backBtn2 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn2 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 3 -->
-<!-- /////// -->
-
-<div id="modal3" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="inputNameValue" class="blueText flow-text center">First, let's kick things off with a few questions about your income.</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">All you'll need is just a copy of your Form W-2. <br> If you plan on filing jointly with your spouse, we’ll ask for your spouse’s information a little later. </p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn3 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal1" class="centerBtn3 center-button col-sm-2 center modal-action waves-effect waves-green btn-flat btn" style="position: absolute">I don't have my W2</a>
-   <a href="#modal2" class="nextBtn3 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">I have my W2</a>
-  </div>
-</div>
-  
-<!--//////// -->
-<!-- Modal 4 -->
-<!-- /////// -->
-
-<div id="modal4" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="inputNameValue" class="blueText flow-text center">Enter your wages, salaries &amp; tips</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">You can find this information in <strong>Box 1</strong> of your W2</p>
-     <form>
-       <div class="col-sm-4 col-sm-offset-4">
-         <div class="input-group">
-          <div class="input-group-addon" for="inputWages">$</div>
-          <input type="text" class="form-control" id="inputWages" name="inputWages">
-        </div>
-      </div>
-    </form>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-<a href="#modal1" class="backBtn4 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn4 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 5 -->
-<!-- /////// -->
-
-<div id="modal5" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="interestQuestion" class="blueText flow-text center">Did you receive any taxable interest in 2015?</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">This includes any interest you received from bank accounts, or from loans you made to others.</p>
-     <form id="interestForm">
-       <div class="col-sm-4 col-sm-offset-4">
-        <label display="inline" for="inputInterest">$</label>
-        <input type="text" class="form-control inputInterest animated zoomIn" display="inline" id="inputInterest">
-      </div>
-    </form>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn5 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal2" class="centerBtn5 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
-   <a href="#modal2" class="nextBtn5 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 6 -->
-<!-- /////// -->
-
-<div id="modal6" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="unemployQuestion" class="blueText flow-text center">Did you receive any unemployment compensation in 2015?</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-     <form id="unemploymentForm">
-       <div class="col-sm-4 col-sm-offset-4">
-        <label display="inline" for="inputUnemp">$</label>
-        <input type="text" class="form-control animated zoomIn" display="inline" id="inputUnemp">
-      </div>
-    </form>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn6 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal2" class="centerBtn6 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
-   <a href="#modal2" class="nextBtn6 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 7 -->
-<!-- /////// -->
-
-<div id="modal7" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="alaskaQuestion" class="blueText flow-text center">Did you receive any Alaska Permanent Fund dividends in 2015?</p>
-  </div>
-  <div class="blueLine center"><img class="alaska" src="/img/alaska.png"></div>
-  <div class="yourName row">
-     <form id="alaskaForm">
-       <div class="col-sm-4 col-sm-offset-4">
-        <label display="inline" for="inputAlaska">$</label>
-        <input type="text" class="form-control animated zoomIn" display="inline" id="inputAlaska">
-      </div>
-    </form>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn7 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal2" class="centerBtn7 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
-   <a href="#modal2" class="nextBtn7 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 8 -->
-<!-- /////// -->
-
-<div id="modal8" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="greatNews" class="blueText flow-text center"></p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">We're almost done entering your income information. <br> Just a couple more questions about your filing status.</p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn8 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn8 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 9 -->
-<!-- /////// -->
-
-<div id="modal9" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="filingQuestion" class="blueText flow-text center">Would you like to file your taxes individually or jointly with your spouse?</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn9 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal2" class="centerBtn9 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Jointly</a>
-   <a href="#modal2" class="nextBtn9 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Individually</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 10 -->
-<!-- /////// -->
-
-<div id="modal10" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="dependentQuestion" class="blueText flow-text center">Can someone else claim you (and/or your spouse, if filing jointly) as a dependent?</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">Answer this question regardless of whether they <em>actually</em> claim you (and/or your spouse) as a dependent or not.</p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn10 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="centerBtn9 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
-   <a href="#modal2" class="nextBtn10 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
-  </div>
-</div>
-
-<!-- /////// -->
-<!-- Modal 11 -->
-<!-- /////// -->
-
-<div id="modal11" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="doneIncome" class="blueText flow-text center"></p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">We're all done with your income information. <br> Now just a couple questions about credits and withholdings and we'll be all set.</p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn11 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn11 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-
-<!--//////// -->
-<!-- Modal 12 -->
-<!-- /////// -->
-
-<div id="modal12" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="doneIncome" class="blueText flow-text center">How much total Federal Income Tax did you have withheld in 2015?.</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">You can find this information in <strong>Box 2</strong> of your W2.</p>
-    <form id="withholdingsForm">
-         <div class="col-sm-4 col-sm-offset-4">
-          <label display="inline" for="withholdingsInput">$</label>
-          <input type="text" class="form-control" display="inline" id="withholdingsInput">
-        </div>
-    </form>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn12 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn12 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 13 -->
-<!-- /////// -->
-
-<div id="modal13" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="doneIncome" class="blueText flow-text center">Based on your calculated Adjusted Gross Income of XX and your Filing Status of YY, your Earned Income Credit (EIC) is: $EIC</p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-    <p class="flow-text center">The EIC is a tax credit for certain people who work and have earned income under $14,820 ($20,330 for married filing jointly).</p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn13 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-   <a href="#modal2" class="nextBtn13 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
-  </div>
-</div>
-
-
-<!--//////// -->
-<!-- Modal 14 -->
-<!-- /////// -->
-
-<div id="modal14" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="armedForcesQuestion" class="blueText flow-text center">
-      Did you serve in the U.S. Armed Forces during 2015?
-    </p>
-    <p id="armedForcesQuestion2" class="blueText flow-text center">
-    </p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-     <p class="flow-text center centerText14">
-      If, at any point during 2015, you served in the U.S. Armed Forces and were stationed in a Presidentially designated Combat Zone, you may have Nontaxable Combat Pay Elections to report. These Elections can be found on the W2 form provided to you by the U.S. Department of Defense. 
-    </p>
-     <form id="armedForcesForm">
-       <div class="col-sm-4 col-sm-offset-4">
-        <label display="inline" for="inputCombat">$</label>
-        <input type="text" class="form-control" display="inline" id="inputCombat">
-      </div>
-    </form>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn14 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal2" class="centerBtn14 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
-   <a href="#modal2" class="nextBtn14 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
-  </div>
-</div>
-
-
-<!--//////// -->
-<!-- Modal 15 -->
-<!-- /////// -->
-
-<div id="modal15" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="healthcareQuestion" class="blueText flow-text center">
-      Did you you have healthcare coverage during 2015?
-    </p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-     <p class="flow-text center centerText14">
-      The Patient Protection &amp; Affordable Care Act mandates that all Americans must either have qualifying health coverage or pay a tax penalty.
-    </p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn15 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-    <a href="#modal2" class="centerBtn15 center-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
-   <a href="#modal2" class="nextBtn15 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
-  </div>
-</div>
-
-<!--//////// -->
-<!-- Modal 16 -->
-<!-- /////// -->
-
-<div id="modal16" class="modal modal-fixed">
-  <div class="modal-content">
-    <p id="calcRefund" class="blueText flow-text center">
-     One moment please while we calculate your tax return.
-    </p>
-  </div>
-  <div class="blueLine center"></div>
-  <div class="yourName row">
-     <p class="flow-text center centerText14">
-      ...calculating...
-    </p>
-  </div>
-   <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn16 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
-  <a href="#modal2" class="nextBtnOwe next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Owe</a>
-   <a href="#modal2" class="nextBtnRefund next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Refund</a>
-  </div>
-</div>
-
 
 <!--//////// -->
 <!-- Return Owe Page -->
 <!-- /////// -->
-<div id="modal17" class="modal" style="top:0">
-  <div class="modal-content"> 
+<div id="modal17">
+  <div> 
   <div id="everything"> 
       <div class="row topRow">
         <div class="col-sm-8">
@@ -530,103 +252,422 @@
 </div>
 </div>
 
-<!--//////// -->
-<!-- Refund Page -->
-<!-- /////// -->
-<div id="modal19" class="modalFull" style="top:0">
-  <div class="modal-content"> 
-    <div id="everything"> 
-        <div class="outerBox">
-    <div class="row">
-      <p class="flow-text center blueText">Congratulations! You have a refund of</p>
-        <div class="flow-text center blueText refundAmt">$ 
-        <span class="refundAmt"> 5,435.32 </span></div>
-          <div class="blueLine2 center"></div>
+<!-- Begin Full Page -->
+
+<div id="fullpage">
+<div class="section">
+<div id="coolComputer">
+  <div class="macDaddy">
+    <div class="container fullscreen-bg">
+      <img class="bigMac img-responsive" src="/img/mac.png">
+      <p class="flow-text center"> Spend less time filing, and more time pursuing the things you love.
+        <img class="logo" src="/img/logobeach.png">
+      </p>
+
     </div>
-    <div class="row">
-        <div class="col-sm-3 flow-text center amazonAwesome">
-          Here's a selection of awesome items you can purchase with your refund at 
-        <a href ="http://www.amazon.com/" target="_blank">
-      <img  class="img-responsive amazon hoverable" src ="img/amazon.png" width="1400px"></a>
-  
-              <div class="row">
-                <a id="downloadBtn2" class="downloadBtn waves-effect waves-light btn margin5" href="#">View 1040EZ</a>
-              </div>
-  
-              <div class="row">
-                <a id="exitBtn2" class="downloadBtn waves-effect waves-light btn exitBtn margin5" href="#">Exit Application</a>
-              </div>
-            </div>
-    <div class="col-sm-8 col-sm-offset-4 hoverable center blueText box1 animate flipInY boxes">
-        <div class="row amazonRow">
-          <div class="col-sm-4">
-            <h6 class="center amazonText">Intex Pull-out Sofa Inflatable Bed</h6>
-              <img class="img-responsive amazon-img" src="img/couch.jpg">
-          </div>
-           <div class="col-sm-5">
-                    <p class="dataType">Customer Rating</p>
-                    <div class="dataUnderline"></div>
-                    <p id="employer0" class="jobApiData">****</p>
-                     <p class="dataType">Shipping</p>
-                    <div class="dataUnderline"></div>
-                    <p id="posted0" class="jobApiData">Free Shipping</p>
-            </div>
-            <div class="col-sm-3">
-               <p class="dataType">Price</p>
-                    <div class="dataUnderline"></div>
-                     <p id="posted0" class="jobApiData">$45.65</p>
-              <a class="waves-effect waves-light btn" href="#">Buy Now!</a>
-          </div>
-        </div>
-      </div>
-        <div class="col-sm-8 col-sm-offset-4 hoverable center blueText box1 animate flipInY boxes">
-        <div class="row amazonRow">
-          <div class="col-sm-4">
-            <h6 class="center amazonText">Intex Pull-out Sofa Inflatable Bed</h6>
-              <img class="img-responsive amazon-img" src="img/couch.jpg">
-          </div>
-           <div class="col-sm-5">
-                    <p class="dataType">Customer Rating</p>
-                    <div class="dataUnderline"></div>
-                    <p id="employer0" class="jobApiData">****</p>
-                     <p class="dataType">Shipping</p>
-                    <div class="dataUnderline"></div>
-                    <p id="posted0" class="jobApiData">Free Shipping</p>
-            </div>
-            <div class="col-sm-3">
-               <p class="dataType">Price</p>
-                    <div class="dataUnderline"></div>
-                     <p id="posted0" class="jobApiData">$45.65</p>
-              <a class="waves-effect waves-light btn" href="#">Buy Now!</a>
-          </div>
-        </div>
-      </div><div class="col-sm-8 col-sm-offset-4 hoverable center blueText box1 animate flipInY boxes">
-        <div class="row amazonRow">
-          <div class="col-sm-4">
-            <h6 class="center amazonText">Intex Pull-out Sofa Inflatable Bed</h6>
-              <img class="img-responsive amazon-img" src="img/couch.jpg">
-          </div>
-           <div class="col-sm-5">
-                    <p class="dataType">Customer Rating</p>
-                    <div class="dataUnderline"></div>
-                    <p id="employer0" class="jobApiData">****</p>
-                     <p class="dataType">Shipping</p>
-                    <div class="dataUnderline"></div>
-                    <p id="posted0" class="jobApiData">Free Shipping</p>
-            </div>
-            <div class="col-sm-3">
-               <p class="dataType">Price</p>
-                    <div class="dataUnderline"></div>
-                     <p id="posted0" class="jobApiData">$45.65</p>
-              <a class="waves-effect waves-light btn" href="#">Buy Now!</a>
-          </div>
-        </div>
-      </div>
-</div>
-</div>
+
+    <div class="container videoContainer">
+      <video loop muted autoplay poster="img/beach2.mp4" class="fullscreen-bg__video img-responsive">
+        <source src="img/beach2.mp4" type="video/webm">
+        <source src="img/beach1.mp4" type="video/webm">
+      </video>
     </div>
   </div>
 </div>
+</div>
+<div class="section">
+    <div class="blueLine center separate"></div>
+
+
+
+  <div class="container taxform section">
+      <p class="flow-text center get-started animated fadeInDown">Your fastest tax return is only clicks away.
+        <a class="waves-effect waves-light btn modal-trigger kickoff" href="#modal1">Get Started</a>
+      </p>
+      <img class="img-responsive swifttaxform animated fadeInDown" src="/img/swifttaxform.png">
+   
+
+      <div class="blueLine center separate"></div>
+
+   </div>
+
+ </div>
+</div>
+
+
+
+
+
+
+
+<!-- ///////////////////////////////////////////// -->
+<!-- Modal Structure, this is the head of the Modal-->
+<!-- ///////////////////////////////////////////// -->
+
+<div id="modal1" class="modal modal-fixed">
+  <div class="modal-content">
+    <h4 class="flow-text center"></h4>
+    <p class="blueText flow-text center">Let's get started by getting to know you.</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">What is your first name?</p>
+    <div class="col-sm-4 col-sm-offset-4">
+      <input type="text" class="form-control" id="inputFirstName">
+      <p id="validNameCheck" class="shake animated">Please enter a valid name</p>
+    </div>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal2" class="nextBtn1 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+
+<!--//////// -->
+<!-- Modal 2 -->
+<!-- /////// -->
+
+<div id="modal2" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="inputNameValue" class="blueText flow-text center"></p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">You're just a few short steps away from completing your 2015 Tax Return.</p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+      <img id="on"class="img-responsive progressbar animated flipInX" src="img/progressbar1.png">
+
+   <a href="#modal1" class="backBtn2 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn2 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 3 -->
+<!-- /////// -->
+
+<div id="modal3" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="inputNameValue" class="blueText flow-text center">First, let's kick things off with a few questions about your income.</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">All you'll need is just a copy of your Form(s) W-2. <br> If you plan on filing jointly with your spouse, answer the following questions with the pertinent information from their Form(s) W-2 as well. </p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn3 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn3 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+  
+<!--//////// -->
+<!-- Modal 4 -->
+<!-- /////// -->
+
+<div id="modal4" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="inputNameValue" class="blueText flow-text center">Enter your wages, salaries &amp; tips</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">You can find this information in <strong>Box 1</strong> of your W2</p>
+     <form>
+       <div class="col-sm-4 col-sm-offset-4">
+         <div class="input-group">
+          <div class="input-group-addon" for="inputWages">$</div>
+          <input type="text" class="form-control" id="inputWages" name="inputWages">
+        </div>
+      </div>
+    </form>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+<a href="#modal1" class="backBtn4 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn4 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 5 -->
+<!-- /////// -->
+
+<div id="modal5" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="interestQuestion" class="blueText flow-text center">Did you receive any taxable interest in 2015?</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">This includes any interest you received from bank accounts, or from loans you made to others.</p>
+     <form id="interestForm">
+       <div class="col-sm-4 col-sm-offset-4">
+        <label display="inline" for="inputInterest">$</label>
+        <input type="text" class="form-control inputInterest animated zoomIn" display="inline" id="inputInterest">
+      </div>
+    </form>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn5 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+    <a href="#modal2" class="centerBtn5 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
+   <a href="#modal2" class="nextBtn5 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 6 -->
+<!-- /////// -->
+
+<div id="modal6" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="unemployQuestion" class="blueText flow-text center">Did you receive any unemployment compensation in 2015?</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div id="stormDiv">
+    <img id="loopStorm" src="img/loopStorm.gif">
+  </div>
+  <div class="yourName row">
+     <form id="unemploymentForm">
+       <div class="col-sm-4 col-sm-offset-4">
+        <label display="inline" for="inputUnemp">$</label>
+        <input type="text" class="form-control animated zoomIn" display="inline" id="inputUnemp">
+      </div>
+    </form>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn6 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+    <a href="#modal2" class="centerBtn6 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
+   <a href="#modal2" class="nextBtn6 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 7 -->
+<!-- /////// -->
+
+<div id="modal7" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="alaskaQuestion" class="blueText flow-text center">Did you receive any Alaska Permanent Fund dividends in 2015?</p>
+  </div>
+  <div class="blueLine center"><img class="alaska" src="/img/alaska.png"></div>
+  <div class="yourName row">
+     <form id="alaskaForm">
+       <div class="col-sm-4 col-sm-offset-4">
+        <label display="inline" for="inputAlaska">$</label>
+        <input type="text" class="form-control animated zoomIn" display="inline" id="inputAlaska">
+      </div>
+    </form>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn7 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+    <a href="#modal2" class="centerBtn7 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
+   <a href="#modal2" class="nextBtn7 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 8 -->
+<!-- /////// -->
+
+<div id="modal8" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="greatNews" class="blueText flow-text center"></p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">We're almost done entering your income information. <br> Just a couple more questions about your filing status.</p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn8 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn8 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 9 -->
+<!-- /////// -->
+
+<div id="modal9" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="filingQuestion" class="blueText flow-text center">Would you like to file your taxes individually or jointly with your spouse?</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn9 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+    <a href="#modal2" class="centerBtn9 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Jointly</a>
+   <a href="#modal2" class="nextBtn9 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Individually</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 10 -->
+<!-- /////// -->
+
+<div id="modal10" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="dependentQuestion" class="blueText flow-text center">Can someone else claim you (and/or your spouse, if filing jointly) as a dependent?</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">Answer this question regardless of whether they <em>actually</em> claim you (and/or your spouse) as a dependent or not.</p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn10 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="centerBtn10 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
+   <a href="#modal2" class="nextBtn10 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
+  </div>
+</div>
+
+<!-- /////// -->
+<!-- Modal 11 -->
+<!-- /////// -->
+
+<div id="modal11" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="doneIncome" class="blueText flow-text center"></p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">We're all done with your income information. <br> Now just a couple questions about credits and withholdings and we'll be all set.</p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn11 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn11 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+
+<!--//////// -->
+<!-- Modal 12 -->
+<!-- /////// -->
+
+<div id="modal12" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="doneIncome" class="blueText flow-text center">How much total Federal Income Tax did you have withheld in 2015?.</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">You can find this information in <strong>Box 2</strong> of your W2.</p>
+    <form id="withholdingsForm">
+         <div class="col-sm-4 col-sm-offset-4">
+          <label display="inline" for="withholdingsInput">$</label>
+          <input type="text" class="form-control" display="inline" id="withholdingsInput">
+        </div>
+    </form>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn12 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn12 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 13 -->
+<!-- /////// -->
+
+<div id="modal13" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="doneIncome" class="blueText flow-text center">Based on your calculated Adjusted Gross Income of XX and your Filing Status of YY, your Earned Income Credit (EIC) is: $EIC</p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p class="flow-text center">The EIC is a tax credit for certain people who work and have earned income under $14,820 ($20,330 for married filing jointly).</p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn13 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+   <a href="#modal2" class="nextBtn13 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Continue</a>
+  </div>
+</div>
+
+
+<!--//////// -->
+<!-- Modal 14 -->
+<!-- /////// -->
+
+<div id="modal14" class="modal modal-fixed">
+  <div id="patriotText">
+  <div class="modal-content" style="padding: 10px 0px 0px 0px">
+    <p id="armedForcesQuestion0" class="blueText flow-text center">
+    On behalf of a grateful nation, thank you for your service.
+  </p>
+    <p id="armedForcesQuestion" class="blueText flow-text center">
+      Did you serve in the U.S. Armed Forces during 2015?
+    </p>
+    <p id="armedForcesQuestion2" class="blueText flow-text center">
+    </p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+     <p id="armedForcesTextFont" class="flow-text center centerText14">
+      If, at any point during 2015, you served in the U.S. Armed Forces and were stationed in a Presidentially designated Combat Zone, you may have Nontaxable Combat Pay Elections to report. These Elections can be found on the W2 form provided to you by the U.S. Department of Defense. 
+    </p>
+     <form id="armedForcesForm">
+       <div id="armedForcesBox" class="col-sm-4 col-sm-offset-4">
+        <label display="inline" for="inputCombat">$</label>
+        <input type="text" class="form-control" display="inline" id="inputCombat">
+      </div>
+    </form>
+  </div>
+</div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn14 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+    <a href="#modal2" class="centerBtn14 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
+   <a href="#modal2" class="nextBtn14 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
+  </div>
+</div>
+
+
+<!--//////// -->
+<!-- Modal 15 -->
+<!-- /////// -->
+
+<div id="modal15" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="healthcareQuestion" class="blueText flow-text center">
+      Did you you have healthcare coverage during 2015?
+    </p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+     <p class="flow-text center centerText14">
+      The Patient Protection &amp; Affordable Care Act mandates that all Americans must either have qualifying health coverage or pay a tax penalty.
+    </p>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn15 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+    <a href="#modal2" class="centerBtn15 center-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
+   <a href="#modal2" class="nextBtn15 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
+  </div>
+</div>
+
+<!--//////// -->
+<!-- Modal 16 -->
+<!-- /////// -->
+
+<div id="modal16" class="modal modal-fixed">
+  <div class="modal-content">
+    <p id="calcRefund" class="blueText flow-text center">
+     One moment please while we finalize your tax return.
+    </p>
+  </div>
+  <div class="blueLine center"></div>
+  <div class="yourName row">
+    <p id="text_16_0" class="flow-text center centerText16">...Collecting Data...</p>
+    <p id="text_16_1" class="flow-text center centerText16">...Searching for Credits...</p>
+    <p id="text_16_2"class="flow-text center centerText16">...Checking for Errors...</p>
+    <p id="text_16_3"class="flow-text center centerText16">...Calculating Refund...</p>
+    <p id="text_16_4"class="flow-text center centerText16">Finished!</p>
+    <div id="gifDiv">
+      <img id="loopGif" src="img/loopCircle.gif">
+    </div>
+  </div>
+   <div class="emptyDiv" style="height: 100%">
+   <a href="#modal1" class="backBtn16 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+  <a href="#modal2" class="nextBtnOwe next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Owe</a>
+   <a href="#congratsText" class="nextBtnRefund next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Refund</a>
+  </div>
+</div>
+
 
 <!--//////// -->
 <!-- Confirm Exit Page Owe -->

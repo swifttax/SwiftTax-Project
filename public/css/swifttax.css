@@ -87,7 +87,7 @@ nav{
     padding: 0 1rem;
     text-transform: none;
 
-    transition: .2s ease-out;
+    /*transition: .2s ease-out;*/
     cursor: pointer;
     border-radius: 10px;
 
@@ -164,6 +164,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 .modal {
 	padding-top: 5%;
 	background-color: #ffffff;
+  overflow-y: hidden !important; 
 }
 .modal-content {
 	padding-top: 15%; 
@@ -319,7 +320,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     padding: 0 1rem;
     text-transform: none;
 
-    transition: .2s ease-out;
+    /*transition: .2s ease-out;*/
     cursor: pointer;
     border-radius: 10px;
 
@@ -387,7 +388,9 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     position: 0;
     top: 0; 
 }
-
+#modal14{
+  background-size: cover;
+}
  #map {
         height: 500px;
         width: 800px;
@@ -532,7 +535,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     padding: 0 1rem;
     text-transform: none;
 
-    transition: .2s ease-out;
+    /*transition: .2s ease-out;*/
     cursor: pointer;
     border-radius: 10px;
 
@@ -688,8 +691,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     padding: 0 1rem;
     text-transform: none;
 
-    transition: .2s ease-out;
-    cursor: pointer;
+
     border-radius: 10px;
 
 }
@@ -706,6 +708,12 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     font-size: 80px;
     color: #42E035 ;
     font-weight: bolder;
+}
+
+.oweText {
+    font-weight: bold;
+    color: red;
+    font-size: 80px;
 }
 
 .amazonText {
@@ -826,4 +834,85 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     height: 10%;
     opacity: .7;
     margin: 0px auto;
+}
+
+#rating0 , #rating1, #rating2 {
+  width: 77px;
+  margin-left: 38%;
+  margin-top: 2%;
+  margin-bottom: 12%
+}
+.amazon-img{
+    margin: 0px auto;
+    margin-top: 10%;
+    max-height: 120px;
+}
+.amazonText{
+    font-weight: 600;
+    font-size: 1.5rem
+  }
+#refreshBtn {
+  background-color: #42E035;
+}
+#url0, #url1, #url2 {
+  margin-top: 12%
+}
+
+.amazonBox1{
+  -webkit-animation-delay: 0s;
+
+}
+
+.amazonBox2{
+  -webkit-animation-delay: 1.5s;
+}
+
+.amazonBox3{
+  -webkit-animation-delay: 3s;
+
+}
+
+#gifDiv, #flagDiv {
+  width: 90px;
+  margin: 15px auto;
+}
+
+#loopGif{
+  width: 90px;
+  height: 90px;
+}
+
+#patriotText{
+  background-color: white;
+  opacity: 0.8;
+}
+
+#armedForcesQuestion0 {
+    
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #42E035;
+    padding: 10px 0px 0px 0px;
+}
+
+#armedForcesForm {
+  padding-bottom: 15px;
+}
+
+#armedForcesBox{
+  padding: 0px 15px 15px 15px;
+
+}
+
+#armedForcesTextFont {
+  font-weight: 300;
+}
+#loopStorm {
+  height: 150px;
+  width: 150px;
+}
+
+#stormDiv {
+  width: 150px;
+  margin: 40px auto;
 }
