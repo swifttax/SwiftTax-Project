@@ -1,4 +1,3 @@
-
 $("#modal17").css("top","0");
 $(".nextBtn1").hide();
 $("#validNameCheck").hide();
@@ -11,6 +10,10 @@ $(".nextBtn15").hide();
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
+
+// function scrollFireFunction(){
+// };
+
 $("#validNameCheck").hide();
 $("#on").hide();
 $(".nextBtn1").hide();
@@ -22,6 +25,16 @@ $(".nextBtn1").hide();
   $(".kickoff").click(function(){
     $(".main").addClass('animated zoomOut');
   });
+
+// function animatedPFunction(){
+//   $("#animatedP").addClass("get-started animated fadeDown");
+// }
+
+//   var options = [
+//     {selector: '', offset: 600, callback: 'animatedPFunction' }
+//     console.log(animatedPFunction);
+//   ];
+//   Materialize.scrollFire(options);
 
   var inputName;
 
