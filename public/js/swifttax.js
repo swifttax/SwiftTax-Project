@@ -10,7 +10,7 @@ $("#combatPay").hide();
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
-
+$("#finalProgressDiv").hide();
  // $('#fullpage').fullpage();
 $("#armedForcesQuestion0").hide();
 $("#flagDiv").hide();
@@ -286,11 +286,11 @@ $(".nextBtn1").hide();
       $("#text_16_3").hide();
       $("#loopGif").hide();
       $("#text_16_4").fadeIn();
+      $("#finalProgressDiv").show()
       $(".nextBtnOwe").fadeIn(2000);
       $(".nextBtnRefund").fadeIn(2000);
       $(".backBtn16").fadeIn(2000);
     },12000);
-   
     
     
 
