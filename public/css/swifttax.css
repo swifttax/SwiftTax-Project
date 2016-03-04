@@ -921,5 +921,19 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 #stormDiv {
   width: 150px;
-  margin: 40px auto;
+  margin: 10px auto;
+}
+
+.unemployment {
+  margin:0px auto;
+  position: relative;
+  bottom: 30px;
+}
+
+.health {
+  margin: 0px auto;
+}
+
+.vet {
+  margin-top: 3%;
 }
