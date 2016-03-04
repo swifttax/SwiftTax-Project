@@ -235,9 +235,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 	position: relative;
 	top: 1.5rem;
 }
-.main{
-    margin-top: 1%;
-}
+
 .flow-text{
     line-height: 1.3;
     font-family: "Roboto", sans-serif;
@@ -256,7 +254,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     border-top: 1px solid #0082C3;
     margin: 0px auto;
 
-<<<<<<< HEAD
+
 }
 
 .indeed {
@@ -790,14 +788,9 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   padding: 5px;
   margin: 10px;
 }
-
-<<<<<<< HEAD
-#rating0 , #rating1, #rating2 {
-  width: 77px;
-  margin-left: 38%;
-  margin-top: 2%;
-  margin-bottom: 12%
-}
+/*//////////////////////////////////*/
+/*Opening Div with Macbook and Video*/
+/*//////////////////////////////////*/
 
 #refreshBtn {
   background-color: #42E035;
@@ -809,33 +802,46 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 .bigMac{
     margin: 0px auto;
-    margin-top: 8%;
+    margin-top: 4%;
 }
 
 .videoContainer {
   max-height: 0px;
 }
 
-.fullscreen-bg {
-    /*position: fixed;*/
+/*.fullscreen-bg {
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     overflow: hidden;
     z-index: -100;
-}
+}*/
 
 .fullscreen-bg__video {
     position: relative;
-    top: -526px;
+    top: -455px;
     left: 0;
     width: 64.39%;
-    height: 10%;
     opacity: .7;
     margin: 0px auto;
 }
 
+
+/*////////////////////////////////*/
+/*Icons for Modals sizing, spacing*/
+/*////////////////////////////////*/
+.individual,
+.joint {
+  
+}
+
+.logobeach {
+  position: relative;
+  right: 10px;
+  margin-top: 3%;
+}
 #rating0 , #rating1, #rating2 {
   width: 77px;
   margin-left: 38%;
