@@ -230,7 +230,7 @@ $(".nextBtn1").hide();
  $(".nextBtn14").click(function(){
     $('#modal14').closeModal({out_duration: 0,});
     $('#modal15').openModal({in_duration: 0,}); 
-     $("#modal14").css("background-image","")
+     $("#modal14").css("background-image","");
      $("#armedForcesQuestion0").hide();
       $("#armedForcesQuestion").show();
       $("#armedForcesQuestion2").text("");
@@ -248,7 +248,10 @@ $(".nextBtn1").hide();
     $("#armedForcesForm").hide();
   });
   $(".centerBtn14").click(function(){
-    $("#modal14").css("background-image","url('/img/usFlag.jpg')")
+    // $("#modal14").css({"background-image":"url('/img/usFlag.jpg')","transition
+    //   ":"background-image 3s ease"});
+      $("#modal14").css("background-image","url('/img/usFlag.jpg')");
+      $("#modal14").css("transition","background-image 10s ease");
     $('.centerBtn14').hide();
     $(".nextBtn14").text("Continue");
     $("#armedForcesQuestion").hide();
