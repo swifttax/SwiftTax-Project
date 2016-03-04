@@ -1,5 +1,4 @@
 
-
 $(".nextBtn1").hide();
 $("#validNameCheck").hide();
 $("#interestForm").hide();
@@ -11,6 +10,7 @@ $("#combatPay").hide();
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
+
  // $('#fullpage').fullpage();
 $("#armedForcesQuestion0").hide();
 $("#flagDiv").hide();
@@ -43,6 +43,16 @@ $(".nextBtn1").hide();
   $(".kickoff").click(function(){
     $(".main").addClass('animated zoomOut');
   });
+
+// function animatedPFunction(){
+//   $("#animatedP").addClass("get-started animated fadeDown");
+// }
+
+//   var options = [
+//     {selector: '', offset: 600, callback: 'animatedPFunction' }
+//     console.log(animatedPFunction);
+//   ];
+//   Materialize.scrollFire(options);
 
   var inputName;
 
