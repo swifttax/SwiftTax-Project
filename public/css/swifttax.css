@@ -3,28 +3,68 @@ html {
 	font-weight: lighter;
 }
 
+nav {
+  background: #344363;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.clouds {
+  background-image: url("/img/clouds.png");
+  background: cover;
+  height: auto;
+  width: 100%;
+  background-size: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.followText {
+    font-family: Roboto-Light;
+    color: black;
+    position: absolute;
+    bottom: 6%;
+    left: 43.5%;
+    font-size: 1.1rem;
+}
+.codepen {
+  position: absolute;
+    bottom: 5%;
+    width: 10%;
+    left: 45%
+}
+.codepen img {
+  width: 60%;
+  height: auto;
+}
+.github {
+    position: absolute;
+    bottom: 1%;
+    width: 10%;
+    height: auto;
+    left: 45%;
+}
+
+.github img {
+  width: 60%;
+}
+
+
 
 /*////////////*/
 /*Nav Settings*/
 /*///////////*/
 
-.navlink {
-	font-size: 22px;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.swifttaxform {
-	margin: 0px auto;
-	margin-top: 2%;
-	
-}
-
 .flow-text{
 	font-weight: lighter;
 	padding: 0px 100px;
+}
+
+.flow-text2{
+  line-height: 1.0;
 }
 
 .input-field label {
@@ -35,28 +75,18 @@ a:hover {
 }
 
 
-nav{
+/*nav{
 	background: #42A5F5;
-}
+}*/
 
 /*////////////////////////////////////////////////////////////*/
 /*Animations for Swift Tax Form and Getting Started Button Div*/
 /*////////////////////////////////////////////////////////////*/
 
-.swifttaxform {
-	margin: 0px auto;
-	margin-top: 2%;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-delay: .1s;
-    -webkit-animation-iteration-count: 1;
-	
-}
-
 .get-started {
-	margin-top: 1%;
-   -webkit-animation-duration: 2.3s;
-   -webkit-animation-delay: 2s;
-   -webkit-animation-iteration-count: 1;
+  position: absolute;
+  right: 38%;
+  bottom: -77%;
 }
 
 /*/////////////////////////////////////////////////*/
@@ -223,8 +253,8 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 .separate {
-  margin-bottom: 7%;
-  margin-top: 7%;
+  margin-bottom: 3%;
+  margin-top: 3%;
 
 }
 /*//////////////////////////////////////////////////////////////*/
@@ -809,39 +839,35 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   max-height: 0px;
 }
 
-/*.fullscreen-bg {
-    position: fixed;
+.fullscreen-bg {
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     overflow: hidden;
     z-index: -100;
-}*/
+}
 
 .fullscreen-bg__video {
     position: relative;
-    top: -455px;
+    top: 246px;
     left: 0;
-    width: 64.39%;
+    width: 43.79%;
+    max-width: 650px;
+    max-height: 450px;
     opacity: .7;
     margin: 0px auto;
+    /*margin-top: 1%;*/
+    margin-bottom: 1%;
 }
+
 
 
 /*////////////////////////////////*/
 /*Icons for Modals sizing, spacing*/
 /*////////////////////////////////*/
-.individual,
-.joint {
-  
-}
 
-.logobeach {
-  position: relative;
-  right: 10px;
-  margin-top: 3%;
-}
 #rating0 , #rating1, #rating2 {
   width: 77px;
   margin-left: 38%;
@@ -922,17 +948,13 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   width: 150px;
   margin: 10px auto;
 }
-
-.unemployment {
-  margin:0px auto;
-  position: relative;
-  bottom: 30px;
-}
-
+.joint,
+.vet,
+.unemployment,
 .health {
   margin: 0px auto;
 }
 
-.vet {
-  margin-top: 3%;
+.vet{
+  margin-top: 5%;
 }

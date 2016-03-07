@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 500px;
+        width: 800px;
+        margin: 20px auto;
+      }
+      .center {
+      text-align: center;
+    }
+
+    .jobBox {
+      height: 300px;
+      width: 200px;
+      background-color: #BADBF5;
+      background-image: -webkit-linear-gradient(top, #BADBF5 0%, #42A5F5 100% );
+      border: 1px solid green;
+      border-radius: 7px;
+      margin: 100px;
+    }
+    .dataType {
+      font-family: "Roboto", "sans-serif";
+      font-style: italic;
+      margin: 0px;
+      font-weight: lighter;
+
+    }
+    .next-button {
+      color: white;
+      background-color: #42E035;
+      border-radius: 7px;
+      text-transform: none;
+    }
+    .jobBoxLetter {
+      border: 1px solid black;
+      width: 18px;
+      margin: 20px auto;
+      background-color: darkgreen;
+      color: white;
+      border-radius: 5px;
+    }
+    .jobApiData {
+      font-size: 20px;
+      margin: 0px;
+      margin-bottom: 15px;
+      /*text-decoration: underline;*/
+      font-family: "Roboto", "sans-serif";
+      font-weight: light;
+
+    }
+    .jobTitle {
+      /*text-decoration: underline;*/
+      font-weight: bolder;
+    }
+
+    .applyBtn {
+      margin-top: 20px;
+    }
+
+    .dataUnderline {
+      height: 1px;
+      width: 120px;
+      margin: 0px auto;
+      border-bottom: 1px solid black;
+
+    }
+    #videoDiv {
+      transition: background-image 5s ease;
+      position: relative;
+    }
+    #mainlogo {
+      z-index:1; 
+      position: absolute;
+      top: 10%;
+      left:40%;
+    }
+
+    #spendText {
+      z-index: 1;
+      bottom: 10%;
+      left: 20%;
+      position: absolute;
+      color: white;
+      font-weight: 300;
+      width: 60%;
+      margin: 0px auto;
+    }
+    #beachVideo {
+      z-index: 0;
+      position: relative;
+    }
+
+    #mainlogoImg {
+      height: 10%;
+      width: 10%;
+    }
+    </style>
+    
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKYj_O-hmy5dWj8WcUYkYQL1Bq2tCwA3Y"></script>
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css"> -->
+    <!-- // <script src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script> -->
+  </head>
+  <body>
+
+  
+   <div id="videoDiv">
+      <div id="mainlogo"> <img id="mainlogoImg" class="logobeach zoomlogo" src="img/logobeach.png"></div>
+      <video id="beachVideo" loop muted autoplay class="fullscreen-bg__video img-responsive">
+        <source src="img/beach2.mp4" type="video/webm">
+
+      </video>
+                     
+
+      <div id="spendText" class="flow-text center"> Spend less time filing, and more time pursuing the things you love.</div>
+   </div>
+ 
+  <div class="section">
+    <div id="map"></div>
+  </div>
+  <div class="section">
+
+    <div id="jobBox1" class="jobBox center">
+      <p class="jobBoxLetter">A</p> 
+      <!-- <p class="dataType">Job Title</p> -->
+      <h3 id="jobTitle1" class="jobTitle jobApiData">Web Developer</h3>
+      <p class="dataType">Employer</p>
+      <div class="dataUnderline"></div>
+      <h2 id="employer1" class="jobApiData">Century 21</h2>
+      <p class="dataType">Posted</p>
+      <div class="dataUnderline"></div>
+      <h2 id="posted1" class="jobApiData">4 hours ago</h2>
+      <button class="applyBtn next-button btn-flat">Apply Now!</button>
+    </div>
+  </div>
+  </div>
+
+
+
+
+    <script>
+    $(document).ready(function() {
+   
+  // var currentImg = 0;
+    
+  //   function changeBackgroundImg(){
+        
+  //       var imgSrc = [
+  //     "img/beach2.mp4",
+  //     "img/beach3.mp4"
+  //     ];
+        
+  //       if ( currentImg > imgSrc.length -1) {
+  //           currentImg = 0;
+  //       }
+  //       // $('#beachVideo').attr('background-image', 'url("' + imgSrc[currentImg] +'")');
+  //       // currentImg++;
+  //        $('#beachVideo').attr('src',imgSrc[currentImg]);
+  //       currentImg++;
+  //   };
+  //   setInterval(changeBackgroundImg, 15000);
+
+  //   changeBackgroundImg();
+
+
+
+
+
+ // $('#fullpage').fullpage();
+    
+//     $.fn.fullpage({
+//     scrollOverflow: false   
+// });
+
+
+//     function iedetect(v) {
+//       var r = RegExp('msie' + (!isNaN(v) ? ('\\s' + v) : ''), 'i');
+//     return r.test(navigator.userAgent);
+      
+//   }
+
+
+//     // Wait until the video meta data has loaded
+//     $('#section0 video').on('loadedmetadata', function() {
+      
+//       var $width, $height, // Width and height of screen
+//         $vidwidth = this.videoWidth, // Width of video (actual width)
+//         $vidheight = this.videoHeight, // Height of video (actual height)
+//         $aspectRatio = $vidwidth / $vidheight; // The ratio the video's height and width are in
+            
+//       (adjSize = function() { // Create function called adjSize
+              
+//         $width = $(window).width(); // Width of the screen
+//         $height = $(window).height(); // Height of the screen
+              
+//         $boxRatio = $width / $height; // The ratio the screen is in
+              
+//         $adjRatio = $aspectRatio / $boxRatio; // The ratio of the video divided by the screen size
+              
+//         // Set the container to be the width and height of the screen
+//         $('#section0').css({'width' : $width+'px', 'height' : $height+'px'}); 
+              
+//         if($boxRatio < $aspectRatio) { // If the screen ratio is less than the aspect ratio..
+//           // Set the width of the video to the screen size multiplied by $adjRatio
+//           $vid = $('#section0 video').css({'width' : $width*$adjRatio+'px'}); 
+//         } else {
+//           // Else just set the video to the width of the screen/container
+//           $vid = $('#section0 video').css({'width' : $width+'px'});
+//         }
+                 
+//       })(); // Run function immediately
+            
+//       // Run function also on window resize.
+//       $(window).resize(adjSize);
+//       $('#video')[0].play();      
+//     });
+  
+// });
+
+
+      var jobLatLng;
+      var map;
+      var zip = 78234;
+      var currentLatLng = {
+        lat: 29.424122, 
+        lng: -98.493629
+      }
+      var jobTitle = " Lawyer ";
+      var query = ($.trim(jobTitle)).replace(/\s/g, "+");
+      console.log(query);
+      var jobUrl = "http://api.indeed.com/ads/apisearch?publisher=6167575085685252&q=" + query + "&l=" + zip + "&sort=&radius=&st=&jt=&start=&limit=3&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2";
+        
+     function initMap() {
+          var latUSA = 39.833333;
+          var lngUSA = -98.583333;
+          var latlngUSA = {lat: latUSA, lng: lngUSA};
+          console.log(latlngUSA);
+          map = new google.maps.Map(document.getElementById('map'), {
+            // center: {lat: -34.397, lng: 150.644},
+            center: latlngUSA,
+            zoom: 4
+          });
+        };
+        initMap();
+
+
+      function xmlToJson(xml) {
+        var obj = {};
+        if (xml.nodeType == 1) { // element
+          // do attributes
+          if (xml.attributes.length > 0) {
+          obj["@attributes"] = {};
+            for (var j = 0; j < xml.attributes.length; j++) {
+              var attribute = xml.attributes.item(j);
+              obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+            }
+          }
+        } else if (xml.nodeType == 3) { // text
+          obj = xml.nodeValue;
+        }
+        if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
+          obj = xml.childNodes[0].nodeValue;
+        }
+        else if (xml.hasChildNodes()) {
+          for(var i = 0; i < xml.childNodes.length; i++) {
+            var item = xml.childNodes.item(i);
+            var nodeName = item.nodeName;
+            if (typeof(obj[nodeName]) == "undefined") {
+              obj[nodeName] = xmlToJson(item);
+            } else {
+              if (typeof(obj[nodeName].push) == "undefined") {
+                var old = obj[nodeName];
+                obj[nodeName] = [];
+                obj[nodeName].push(old);
+              }
+              obj[nodeName].push(xmlToJson(item));
+            }
+          }
+        }
+        return obj;
+      };
+
+      $.get(jobUrl)
+        .done(function(data){
+          
+          console.log(data);
+          var jobsJson = xmlToJson(data);
+          console.log(jobsJson);
+          var jobsArray = jobsJson.response.results.result;
+          map.panTo(currentLatLng);
+          map.setZoom(10);
+          var homeImg = 'BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE';
+          var infowindow = new google.maps.InfoWindow({
+            map: map,
+            position: currentLatLng,
+            content: "You are here."
+          });
+          jobsArray.forEach(function(element,index){
+            console.log(index);
+            console.log("______________________");
+            console.log("______________________");
+            console.log("Job Title: " + element.jobtitle);
+            console.log("Employer: " + element.company);
+            console.log("Posted " + element.formattedRelativeTime);
+            console.log(element.latitude + ", " + element.longitude);
+            // jobLatLng = [element.latitude, element.longitude];
+            $("#jobTitle1").text(element.jobtitle);
+            $("#employer1").text(element.company);
+            $("#posted1").text(element.formattedRelativeTime);
+            // var currentLatLng = {
+            //   lat: 29.424122, 
+            //   lng: -98.493629
+            // }
+            
+            jobLatLng = {
+              lat: parseFloat(element.latitude),
+              lng: parseFloat(element.longitude)
+            };
+            console.log(currentLatLng);
+            console.log(jobLatLng);
+
+              if (index == 0) {
+                label = 'A';
+              }
+              else if (index == 1) {
+                label = 'B';
+              }
+              else {
+                lablel = 'C';
+              }
+             
+            
+            marker = new google.maps.Marker({
+              map: map,
+              draggable: false,
+              animation: google.maps.Animation.DROP,
+              position: jobLatLng,
+              label: label
+  
+            });
+            
+
+         
+        
+        })
+});
+
+      
+});
+
+
+
+
+
+    </script>
+  </body>
+</html>
