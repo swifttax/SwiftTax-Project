@@ -8,6 +8,8 @@ $("#armedForcesForm").hide();
 $("#combatPay").hide();
 $("#returnOwePage").hide();
 $(document).ready(function(){
+$(".modal").css("padding","10px");
+$(".modal-content").css("padding","10px");
 $('.parallax').parallax();
 $("#finalProgressDiv").hide();
 $(".button-collapse").sideNav();
@@ -241,6 +243,7 @@ $(".nextBtn1").hide();
       $("#armedForcesQuestion2").text("");
        $(".centerText14").hide();
     $("#armedForcesForm").hide();
+    $(".vet").show();
   });
     $(".backBtn14").click(function(){
       $('#modal14').closeModal({out_duration: 0,});
@@ -251,6 +254,7 @@ $(".nextBtn1").hide();
         $("#armedForcesQuestion2").text("");
         $(".centerText14").hide();
     $("#armedForcesForm").hide();
+     $(".vet").show();
   });
   $(".centerBtn14").click(function(){
     // $("#modal14").css({"background-image":"url('/img/usFlag.jpg')","transition
@@ -264,6 +268,7 @@ $(".nextBtn1").hide();
     $("#armedForcesQuestion2").text("Enter your Nontaxable Combat Pay Elections, if any.");
     $(".centerText14").show();
     $("#armedForcesForm").show();
+     $(".vet").hide();
   });
   $(".centerBtn15").click(function(){
     $('#modal15').closeModal({out_duration: 0,});

@@ -189,19 +189,22 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 .blueText {
 	color:#0082C3; 
 	font-weight: normal;
+  padding: 2%;
 }
 
 .modal {
-	padding-top: 5%;
+	/*padding-top: 5%;*/
 	background-color: #ffffff;
   overflow-y: hidden !important; 
+  padding: 10px;
 }
 .modal-content {
-	padding-top: 15%; 
+	/*padding-top: 15%;*/ 
 	border: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	background-color: ffffff;
+	background-color: #ffffff;
+  padding:10px;
 }
 
 .next-button {
@@ -271,11 +274,13 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     font-family: "Roboto", sans-serif;
     font-weight: lighter;
     color: rgba(0,0,0,0.87);
+    padding: 2%;
 }
 
 .blueText {
     color:#0082C3; 
     font-weight: normal;
+    padding:12px;
 }
 
 .blueLine2 {
@@ -399,7 +404,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 #armedForcesQuestion {
     padding: 0 50px;
-    margin-top: -20px;
+    margin-top: 0px;
 
 }
 
@@ -958,4 +963,78 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 .vet{
   margin-top: 5%;
+}
+
+.emptyDiv {
+  height: 40px;
+}
+.emptyDivBig {
+  height: 60px;
+}
+.emptyDivSmall {
+  height: 20px;
+}
+.emptyDivGiant {
+  height: 80px;
+}
+.emptyDivTiny {
+  height: 10px;
+}
+p {
+  margin: 0px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .back-button {
+    position:relative; 
+    display: inline-block;
+    /*margin-top: 40px;*/
+
+  }
+  .next-button {
+    position:relative;
+    display: inline-block; 
+    margin-top:2%
+  }
+
+  .flow-text{
+    font-size: 3vw;
+  }
+  #unemploymentIcon {
+    width:40%;
+  }
+  .alaska {
+    width: 50%;
+  }
+  .vet, .health, #jointImg  {
+    width: 30%;
+  }
+
+  .centerText16 {
+    font-size: 6vw;
+    font-weight: bold;
+  }
+  .backBtn7, .backBtn8, .backBtn9, .backBtn10, .backBtn11, .backBtn12, .backBtn13 {
+    margin-top: 40px;
+  }
+
+  #armedForcesQuestion0 {
+    font-size: 3vw;
+  }
+
+#armedForcesTextFont {
+  font-size: 2vw;
+  padding: 3px;
+}
+#armedForcesBox {
+  
+  padding-bottom: 0;
+}
+.row14 {
+  top: 0;
+}
+
+.row16 {
+  top: 0;
+  margin-bottom: 0;
 }
