@@ -8,6 +8,8 @@ $("#armedForcesForm").hide();
 $("#combatPay").hide();
 $("#returnOwePage").hide();
 $(document).ready(function(){
+$(".modal").css("padding","10px");
+$(".modal-content").css("padding","10px");
 $("#finalProgressDiv").hide();
 $(".button-collapse").sideNav();
  // $('#fullpage').fullpage();
@@ -54,11 +56,11 @@ $(".nextBtn1").hide();
     if ((/[A-Z]/ig).test($("#inputFirstName").val())) {
         $("#validNameCheck").hide()
         if ($("#inputFirstName").val().length > 1) {
-          $(".nextBtn1").fadeIn(1000).css("transition: ''");
+          $(".nextBtn1").fadeIn(300).css("transition: ''");
         }
     }
     if (($("#inputFirstName").val().length < 2)) {
-      $(".nextBtn1").fadeOut(1000).css("transition: ''");
+      $(".nextBtn1").fadeOut(300).css("transition: ''");
        $("#validNameCheck").show() 
     }
     if (!((/[A-Z]/ig).test($("#inputFirstName").val()))) {
@@ -234,12 +236,13 @@ $(".nextBtn1").hide();
  $(".nextBtn14").click(function(){
     $('#modal14').closeModal({out_duration: 0,});
     $('#modal15').openModal({in_duration: 0,}); 
-     $("#modal14").css("background-image","")
+     $("#modal14").css("background-image","");
      $("#armedForcesQuestion0").hide();
       $("#armedForcesQuestion").show();
       $("#armedForcesQuestion2").text("");
        $(".centerText14").hide();
     $("#armedForcesForm").hide();
+    $(".vet").show();
   });
     $(".backBtn14").click(function(){
       $('#modal14').closeModal({out_duration: 0,});
@@ -250,9 +253,13 @@ $(".nextBtn1").hide();
         $("#armedForcesQuestion2").text("");
         $(".centerText14").hide();
     $("#armedForcesForm").hide();
+     $(".vet").show();
   });
   $(".centerBtn14").click(function(){
-    $("#modal14").css("background-image","url('/img/usFlag.jpg')")
+    // $("#modal14").css({"background-image":"url('/img/usFlag.jpg')","transition
+    //   ":"background-image 3s ease"});
+      $("#modal14").css("background-image","url('/img/usFlag.jpg')");
+      $("#modal14").css("transition","background-image 10s ease");
     $('.centerBtn14').hide();
     $(".nextBtn14").text("Continue");
     $("#armedForcesQuestion").hide();
@@ -260,6 +267,7 @@ $(".nextBtn1").hide();
     $("#armedForcesQuestion2").text("Enter your Nontaxable Combat Pay Elections, if any.");
     $(".centerText14").show();
     $("#armedForcesForm").show();
+     $(".vet").hide();
   });
   $(".centerBtn15").click(function(){
     $('#modal15').closeModal({out_duration: 0,});
@@ -281,9 +289,9 @@ $(".nextBtn1").hide();
       $("#loopGif").hide();
       $("#text_16_4").fadeIn();
       $("#finalProgressDiv").show()
-      $(".nextBtnOwe").fadeIn(2000);
-      $(".nextBtnRefund").fadeIn(2000);
-      $(".backBtn16").fadeIn(2000);
+      $(".nextBtnOwe").fadeIn();
+      $(".nextBtnRefund").fadeIn();
+      $(".backBtn16").fadeIn();
     },12000);
     
     
@@ -327,18 +335,20 @@ $(".nextBtn1").hide();
 
       $(".nextBtnOwe").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
-    window.scrollTo(0,0);
     $(".taxform").hide();
     $("#coolComputer").hide();
+    $(".macDaddy").hide();
     $('#modal17').show();
+    $('html,body').scrollTop(0);
     // $('.lean-overlay').hide();
 });
       $(".nextBtnRefund").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
-    window.scrollTo(0,0);
     $(".taxform").hide();
     $("#coolComputer").hide();
+    $(".macDaddy").hide();
     $('#modal19').show();
+     $('html,body').scrollTop(0);
 
     
     // $('.lean-overlay').hide();
@@ -560,7 +570,8 @@ myDataRef.on('value', function(snapshot) {
     remainingRefund2 = (refund - (data[randomFirst].price));
     if (basket.length < 3) {
         pickRandomSecond();
-        if ((randomSecond != randomFirst) && ((remainingRefund2 - data[randomSecond].price) > 10)){
+        console.log(randomSecond);
+        if (randomSecond != randomFirst){
               basket.push(randomSecond);
               return
             }
@@ -573,6 +584,7 @@ myDataRef.on('value', function(snapshot) {
     remainingRefund3 = (refund - ((data[randomFirst].price) + data[randomSecond].price));
     if (basket.length < 3) {
         pickRandomThird();
+        console.log(randomThird);
         if (randomThird != randomSecond){
             basket.push(randomThird);
             console.log("remainFinal " + (refund-((parseFloat(data[basket[0]].price) + parseFloat(data[basket[1]].price) + parseFloat(data[basket[2]].price)))));
@@ -596,7 +608,9 @@ myDataRef.on('value', function(snapshot) {
 
   function amazonRequest(){
     fillBasket();
-
+    $(".amazonBox1").hide();
+    $(".amazonBox2").hide();
+    $(".amazonBox3").hide();
     basket.forEach(function(element, index){
         $("#amazonText" + index).text(data[basket[index]].name);
         $("#amazonImg" + index).attr("src", data[basket[index]].image);
@@ -612,9 +626,20 @@ myDataRef.on('value', function(snapshot) {
           width: 77
         }));
         }
+        console.log(data[basket[index]].price);
+        console.log((data[basket[index]].price).toFixed(2));
         $("#price" + index).text("$" + (data[basket[index]].price).toFixed(2));
         $("#url" + index).attr("href", data[basket[index]].url );
     });
+    setTimeout(function(){
+      $(".amazonBox1").fadeIn(800);
+    },100);
+     setTimeout(function(){
+      $(".amazonBox2").fadeIn(800);
+    },600);
+      setTimeout(function(){
+      $(".amazonBox3").fadeIn(800);
+    },1100);
   };
 
   amazonRequest();
