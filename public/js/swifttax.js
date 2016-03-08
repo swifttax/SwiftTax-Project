@@ -10,7 +10,6 @@ $("#returnOwePage").hide();
 $(document).ready(function(){
 $(".modal").css("padding","10px");
 $(".modal-content").css("padding","10px");
-$('.parallax').parallax();
 $("#finalProgressDiv").hide();
 $(".button-collapse").sideNav();
  // $('#fullpage').fullpage();
