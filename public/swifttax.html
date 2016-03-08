@@ -12,14 +12,13 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKYj_O-hmy5dWj8WcUYkYQL1Bq2tCwA3Y"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
- <script src="js/swifttaxrefund.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="js/swifttaxrefund.js"></script>
   <script src="js/swifttaxowe.js"></script>
   <script src="js/swifttax.js"></script>
-    <script src="js/materializeFull.js"></script>
+  <script src="js/materializeFull.js"></script>
    <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css"> -->
     <!-- // <script src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script> -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta charset="UTF-8">
  <style type="text/css">
@@ -30,35 +29,44 @@
   <title>
     Swift Tax
   </title>
-
 </head>
-
 <body>
 
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="http://swifttaxproject.dev/swifttax.html" class="brand-logo"><img id="logo" src="/img/logo.png"></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a class="navlink" href="">Home</a></li>
-          <li><a class="navlink" href="">About</a></li>
-        </ul>
-      </div>
-    </nav>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="http://swifttaxproject.dev/swifttax.html" class="brand-logo"><img class="logo animated lightSpeedIn" src="/img/logo.png"</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="http://swifttaxproject.dev/swifttax.html">Home</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="topMac row">
+    <img class="topdiv img-responsive" src="/img/topdiv.png">
   </div>
-
-
-<div class="macDaddy container">
-      <p class="center"><img class="logobeach zoomlogo lightSpeedIn animated" src="/img/logobeach.png">
+  <div class="blueInfoBox">
+    <img class="img-responsive" src="/img/blueinfobox.png">
+  </div>
+      <p class="flow-text center get-started ">
+        <a class="waves-effect waves-light btn modal-trigger get-started" href="#modal1">Get Started</a>
       </p>
-    <img class="bigMac img-responsive" src="/img/mac.png">
-     
-     <video loop muted autoplay poster="img/beach2.mp4" class="fullscreen-bg__video img-responsive">
-      <source src="img/beach2.mp4" type="video/webm">
-    </video>
-</div>
 
-    <p class="flow-text center"> Spend less time filing, and more time pursuing the things you love.</p>
+  <div class="clouds">
+    <img class="img-responsive" src="/img/clouds.png">
+      <p class="followText center">Follow our work on</p>
+      <a class="codepen links" href="http://codepen.io/">
+        <img class="img-responsive" src="/img/codepen.png">
+      </a>
+      <a class="github links" href="https://github.com/">
+        <img class="img-responsive" src="/img/github.png">
+      </a>
+  </div>
 
 
 <!--//////// -->
@@ -296,7 +304,7 @@
 </div>
 </div>
 <div class="section"> -->
-    <div class="blueLine center separate"></div>
+<!--     <div class="blueLine center separate"></div>
 
 
 
@@ -305,14 +313,11 @@
         <a class="waves-effect waves-light btn modal-trigger kickoff" href="#modal1">Get Started</a>
       </p>
       <img class="img-responsive swifttaxform animated fadeInDown" src="/img/swifttaxform.png">
-   
-
-      <div class="blueLine center separate"></div>
 
    </div>
 
  </div>
-</div>
+</div> -->
 
 
 
@@ -420,9 +425,17 @@
     <p class="flow-text center">This includes any interest you received from bank accounts, or from loans you made to others.</p>
      <form id="interestForm">
        <div class="col-sm-4 col-sm-offset-4">
-        <label display="inline" for="inputInterest">$</label>
+       <!--  <label display="inline" for="inputInterest">$</label>
         <input type="text" class="form-control inputInterest animated zoomIn" display="inline" id="inputInterest">
-      </div>
+      </div> -->
+          <div class="input-group">
+            <div class="input-group-addon" for="inputInterest">$</div>
+            <input type="text" class="form-control inputInterest" id="inputInterest" name="inputInterest">
+          </div>
+        </div>
+
+
+
     </form>
   </div>
    <div class="emptyDiv" style="height: 100%">
@@ -442,14 +455,27 @@
   </div>
   <div class="blueLine center"></div>
   <div id="stormDiv">
-    <img id="loopStorm" src="img/loopStorm.gif">
     <img class="img-responsive unemployment" src="img/unemployment.png">
   </div>
   <div class="yourName row">
      <form id="unemploymentForm">
        <div class="col-sm-4 col-sm-offset-4">
+        
+
+
+<!-- 
         <label display="inline" for="inputUnemp">$</label>
-        <input type="text" class="form-control animated zoomIn" display="inline" id="inputUnemp">
+        <input type="text" class="form-control animated zoomIn" display="inline" id="inputUnemp"> -->
+      
+
+          <div class="input-group">
+              <div class="input-group-addon" for="inputUnemp">$</div>
+              <input type="text" class="form-control inputUnemp" id="inputUnemp" name="inputUnemp">
+            </div>
+        
+
+
+
       </div>
     </form>
   </div>
@@ -472,8 +498,18 @@
   <div class="yourName row">
      <form id="alaskaForm">
        <div class="col-sm-4 col-sm-offset-4">
+        
+
+<!-- 
         <label display="inline" for="inputAlaska">$</label>
-        <input type="text" class="form-control animated zoomIn" display="inline" id="inputAlaska">
+        <input type="text" class="form-control animated zoomIn" display="inline" id="inputAlaska"> -->
+      
+            <div class="input-group">
+              <div class="input-group-addon" for="inputAlaska">$</div>
+              <input type="text" class="form-control" id="inputAlaska" name="inputAlaska">
+            </div>
+
+
       </div>
     </form>
   </div>
@@ -513,9 +549,9 @@
   </div>
   <div class="blueLine center"></div>
   <div class="yourName row">
-    <img class="img-responsive joint col-sm-2 col-sm-offset-5" src="img/joint.png">
   </div>
    <div class="emptyDiv" style="height: 100%">
+    <img class="img-responsive joint" src="img/joint.png">
     <a href="#modal1" class="backBtn9 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
     <a href="#modal2" class="centerBtn9 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Jointly</a>
    <a href="#modal2" class="nextBtn9 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">Individually</a>
@@ -566,15 +602,23 @@
 
 <div id="modal12" class="modal modal-fixed">
   <div class="modal-content">
-    <p id="doneIncome" class="blueText flow-text center">How much total Federal Income Tax did you have withheld in 2015?.</p>
+    <p id="doneIncome" class="blueText flow-text center">How much total Federal Income Tax did you have withheld in 2015?</p>
   </div>
   <div class="blueLine center"></div>
   <div class="yourName row">
     <p class="flow-text center">You can find this information in <strong>Box 2</strong> of your W2.</p>
     <form id="withholdingsForm">
          <div class="col-sm-4 col-sm-offset-4">
-          <label display="inline" for="withholdingsInput">$</label>
+          
+
+
+         <!--  <label display="inline" for="withholdingsInput">$</label>
           <input type="text" class="form-control" display="inline" id="withholdingsInput">
+ -->        <div class="input-group">
+              <div class="input-group-addon" for="withholdingsInput">$</div>
+              <input type="text" class="form-control" id="withholdingsInput" name="withholdingsInput">
+            </div>
+
         </div>
     </form>
   </div>
@@ -619,22 +663,28 @@
     <p id="armedForcesQuestion2" class="blueText flow-text center">
     </p>
   </div>
-    <img class="vet col-sm-2 col-sm-offset-5" src="/img/vet.png">
   <div class="blueLine center"></div>
   <div class="yourName row">
-     <p id="armedForcesTextFont" class="flow-text center centerText14">
+     <p id="armedForcesTextFont" class="flow-text flow-text2 center centerText14">
       If, at any point during 2015, you served in the U.S. Armed Forces and were stationed in a Presidentially designated Combat Zone, you may have Nontaxable Combat Pay Elections to report. These Elections can be found on the W2 form provided to you by the U.S. Department of Defense. 
     </p>
      <form id="armedForcesForm">
        <div id="armedForcesBox" class="col-sm-4 col-sm-offset-4">
-        <label display="inline" for="inputCombat">$</label>
-        <input type="text" class="form-control" display="inline" id="inputCombat">
+        
+        <!-- <label display="inline" for="inputCombat">$</label>
+        <input type="text" class="form-control" display="inline" id="inputCombat"> -->
+      <div class="input-group">
+              <div class="input-group-addon" for="inputCombat">$</div>
+              <input type="text" class="form-control" id="inputCombat" name="inputCombat">
+            </div>
+
       </div>
     </form>
   </div>
 </div>
    <div class="emptyDiv" style="height: 100%">
-   <a href="#modal1" class="backBtn14 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
+       <img class="vet img-responsive" src="/img/vet.png">
+    <a href="#modal1" class="backBtn14 back-button col-sm-2 col-sm-offset-1 modal-action waves-effect waves-green btn-flat btn" style="position: absolute">Back</a>
     <a href="#modal2" class="centerBtn14 next-button col-sm-2 col-sm-offset-5 modal-action waves-effect waves-green btn-flat btn">Yes</a>
    <a href="#modal2" class="nextBtn14 next-button col-sm-2 col-sm-offset-9 modal-action waves-effect waves-green btn-flat btn">No</a>
   </div>
