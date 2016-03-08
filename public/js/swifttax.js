@@ -8,7 +8,6 @@ $("#armedForcesForm").hide();
 $("#combatPay").hide();
 $("#returnOwePage").hide();
 $(document).ready(function(){
-$('.parallax').parallax();
 $("#finalProgressDiv").hide();
 $(".button-collapse").sideNav();
  // $('#fullpage').fullpage();
