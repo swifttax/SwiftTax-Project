@@ -6,11 +6,11 @@ $("#unemploymentForm").hide();
 $(".centerText14").hide();
 $("#armedForcesForm").hide();
 $("#combatPay").hide();
-
 $("#returnOwePage").hide();
-
 $(document).ready(function(){
+$('.parallax').parallax();
 $("#finalProgressDiv").hide();
+$(".button-collapse").sideNav();
  // $('#fullpage').fullpage();
 $("#armedForcesQuestion0").hide();
 $("#flagDiv").hide();
@@ -39,11 +39,6 @@ $(".nextBtn1").hide();
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background
   });
-
-  $(".kickoff").click(function(){
-    $(".main").addClass('animated zoomOut');
-  });
-
 // function animatedPFunction(){
 //   $("#animatedP").addClass("get-started animated fadeDown");
 // }

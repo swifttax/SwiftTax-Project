@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="147px" height="22px" viewBox="0 0 147 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-1269.000000, -18.000000)">
+            <g id="logo" transform="translate(1269.000000, 19.000000)">
+                <g id="Group">
+                    <text id="Swift" font-family="Aclonica-Regular, Aclonica" font-size="24" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="36" y="20">Swift</tspan>
+                    </text>
+                    <text id="Tax" font-family="Aclonica-Regular, Aclonica" font-size="24" font-weight="normal" fill="#20CEF3">
+                        <tspan x="103" y="20">Tax</tspan>
+                    </text>
+                    <polygon id="Triangle-7-Copy" fill="#E15050" transform="translate(16.084999, 16.335278) scale(1, -1) translate(-16.084999, -16.335278) " points="32.1699982 13 32.1699982 19.6705557 0 19.6705556 "></polygon>
+                    <polygon id="Triangle-7" fill="#E15050" points="32.1699982 4 32.1699982 10.6705557 0 10.6705556 "></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
