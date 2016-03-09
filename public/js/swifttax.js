@@ -334,24 +334,52 @@ $(".nextBtn1").hide();
   });
 
       $(".nextBtnOwe").click(function(){
+      makeJobMap();
     $('#modal16').closeModal({out_duration: 0,});
     $(".taxform").hide();
     $("#coolComputer").hide();
+    $("#splashPage").hide();
     $(".macDaddy").hide();
     $('#modal17').show();
     $('html,body').scrollTop(0);
+
+  });
+
+    $("#oweBackBtn").click(function(){
+     $('#modal17').hide();
+    $('#modal16').openModal({out_duration: 0,});
+    $(".taxform").show();
+    $("#coolComputer").show();
+    $("#splashPage").show();
+    $(".macDaddy").show();
+   
+
+    });
+     
     // $('.lean-overlay').hide();
 });
-      $(".nextBtnRefund").click(function(){
+       $("#nextBtnRefund").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
     $(".taxform").hide();
     $("#coolComputer").hide();
+    $("#splashPage").hide();
     $(".macDaddy").hide();
     $('#modal19').show();
-     $('html,body').scrollTop(0);
+    $('html,body').scrollTop(0);
 
+  });
     
     // $('.lean-overlay').hide();
+ $("#refundBackBtn").click(function(){
+     $('#modal19').hide();
+    $('#modal16').openModal({out_duration: 0,});
+    $(".taxform").show();
+    $("#coolComputer").show();
+    $("#splashPage").show();
+    $(".macDaddy").show();
+   
+
+  
 
   });
     $(".backBtn16").click(function(){
@@ -379,6 +407,7 @@ $(".nextBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
       $(".taxform").show();
       $("#coolComputer").show();
+      $("#splashPage").show();
   });
 $(".backBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
@@ -393,6 +422,7 @@ $(".nextBtn20").click(function(){
       $('#modal20').closeModal({out_duration: 0,});
       $(".taxform").show();
       $("#coolComputer").show();
+        $("#splashPage").show();
 
   });
 $(".backBtn20").click(function(){
@@ -407,14 +437,15 @@ $(".backBtn20").click(function(){
       var map;
       var zip = 78234;
       var currentLatLng = {
-        lat: 29.424122, 
-        lng: -98.493629
+        lat: 29.4267860, 
+        lng: -98.4895760
       }
+
       var jobTitle = " Lawyer ";
       var query = ($.trim(jobTitle)).replace(/\s/g, "+");
       console.log(query);
       var jobUrl = "http://api.indeed.com/ads/apisearch?publisher=6167575085685252&q=" + query + "&l=" + zip + "&sort=&radius=&st=&jt=&start=&limit=3&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2";
-        
+  function makeJobMap() {  
      function initMap() {
           var latUSA = 39.833333;
           var lngUSA = -98.583333;
@@ -424,10 +455,13 @@ $(".backBtn20").click(function(){
             // center: {lat: -34.397, lng: 150.644},
             center: latlngUSA,
             zoom: 4,
-            draggable: false
+            draggable: true
           });
         };
         initMap();
+        google.maps.event.addListenerOnce(map, 'idle', function() {
+    google.maps.event.trigger(map, 'resize');
+});
 
       function xmlToJson(xml) {
         var obj = {};
@@ -464,7 +498,7 @@ $(".backBtn20").click(function(){
         }
         return obj;
       };
-
+      function jobGetRequest(){
       $.get(jobUrl)
         .done(function(data){
           
@@ -538,6 +572,9 @@ $("body").on("click", "#applyBtn2", function(){
 
   
 });
+};
+jobGetRequest();
+};
 // Amazon API Call //
 
 var myDataRef = new Firebase("https://swifttax-amazon-db.firebaseio.com/");
@@ -649,7 +686,7 @@ myDataRef.on('value', function(snapshot) {
      amazonRequest();
   });
 
-});
+
 
 });
 
