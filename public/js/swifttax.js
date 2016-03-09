@@ -338,8 +338,10 @@ $(".nextBtn1").hide();
     $(".taxform").hide();
     $("#coolComputer").hide();
     $(".macDaddy").hide();
+    $('#mainStuff').hide();
     $('#modal17').show();
-    $('html,body').scrollTop(0);
+    $("html,body").scrollTop(0);
+    // $('html,body').scrollTop(0);
     // $('.lean-overlay').hide();
 });
       $(".nextBtnRefund").click(function(){
@@ -347,8 +349,10 @@ $(".nextBtn1").hide();
     $(".taxform").hide();
     $("#coolComputer").hide();
     $(".macDaddy").hide();
+    $('#mainStuff').hide();
     $('#modal19').show();
-     $('html,body').scrollTop(0);
+     $("html,body").scrollTop(0);
+     // $('html,body').scrollTop(0);
 
     
     // $('.lean-overlay').hide();
@@ -379,6 +383,7 @@ $(".nextBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
       $(".taxform").show();
       $("#coolComputer").show();
+      $("#mainStuff").show();
   });
 $(".backBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
@@ -393,6 +398,7 @@ $(".nextBtn20").click(function(){
       $('#modal20').closeModal({out_duration: 0,});
       $(".taxform").show();
       $("#coolComputer").show();
+      $("#mainStuff").show();
 
   });
 $(".backBtn20").click(function(){
@@ -424,10 +430,13 @@ $(".backBtn20").click(function(){
             // center: {lat: -34.397, lng: 150.644},
             center: latlngUSA,
             zoom: 4,
-            draggable: false
+            draggable: true
           });
         };
         initMap();
+        google.maps.event.addListenerOnce(map, 'idle', function() {
+    google.maps.event.trigger(map, 'resize');
+});
 
       function xmlToJson(xml) {
         var obj = {};
@@ -512,7 +521,7 @@ $(".backBtn20").click(function(){
              
             marker = new google.maps.Marker({
               map: map,
-              draggable: false,
+              draggable: true,
               animation: google.maps.Animation.DROP,
               position: jobLatLng,
               icon: letterIcon
