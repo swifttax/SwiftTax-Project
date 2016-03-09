@@ -27,12 +27,12 @@ $pdf->fillForm(
 		'nameFirst'=>$formInput["boxfirstName"],
 		'nameLast'=>$formInput["boxlastName"],
 		'ssn'=>$formInput["box_ssn"],
-		'nameFirstSpouse'=>$formInput["box_nameFirstSpouse"],
-		'nameLastSpouse'=>$formInput["box_nameLastSpouse"],
-		'spouse_social'=>$formInput["box_spouse_social"],
+		// 'nameFirstSpouse'=>$formInput["box_nameFirstSpouse"],
+		// 'nameLastSpouse'=>$formInput["box_nameLastSpouse"],
+		// 'spouse_social'=>$formInput["box_spouse_social"],
 		'street'=>$formInput["box_street"],
-		'apt_no'=>$formInput["box_apt_no"],
-		'city'=>$formInput["box_city"],
+		// 'apt_no'=>$formInput["box_apt_no"],
+		'address'=>$formInput["box_city"],
 		'1'=>$formInput["box1"],
 		'2'=>$formInput["box2"],
 		'3'=>$formInput["box3"],
@@ -41,17 +41,20 @@ $pdf->fillForm(
 		'6'=>$formInput["box6"],
 		'7'=>$formInput["box7"],
 		'8a'=>$formInput["box8a"],
+		'8b'=>$formInput["box8b"],
 		'9'=>$formInput["box9"],
 		'10'=>$formInput["box10"],
 		'11'=>$formInput["box11"],
 		'12'=>$formInput["box12"],
 		'13a'=>$formInput["box13a"],
-		'14'=>$formInput["box14"]
+		'14'=>$formInput["box14"],
+		'occupation'=>$formInput["boxOccupation"]
 		)
 	)
     ->needAppearances()
     ->flatten()
     ->saveAs("save.pdf");
+    header("Location: /save.pdf");
     //->send('filled.pdf');
 
  //    $pdf = new Pdf('1040.pdf');
