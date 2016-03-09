@@ -1,6 +1,7 @@
 
 html {
 	font-weight: lighter;
+  background-color: #21D5FB
 }
 
 nav {
@@ -44,7 +45,7 @@ a:hover {
 .followText {
     font-family: Roboto-Light;
     color: black;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
 }
 
 .about-codepen {
@@ -96,7 +97,15 @@ footer {
 }
 
 .github {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+.github img {
+  width: 10%;
+}
+
+.codepen img {
+  width: 12%;
 }
 
 /*.clouds footer {
@@ -917,6 +926,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 #patriotText{
   background-color: white;
   opacity: 0.8;
+  padding-bottom: 20px;
 }
 
 #armedForcesQuestion0 {
@@ -978,6 +988,16 @@ p {
   margin: 0px;
 }
 
+.unemploymentIcon {
+  margin: 60%;
+
+}
+
+.health {
+      width: 30%;
+    margin-top: 10px;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   .back-button {
     position:relative; 
@@ -990,12 +1010,20 @@ p {
     display: inline-block; 
     margin-top:2%
   }
+ /* .health {
+    width: auto;
+    margin-top: 0%;
+}*/
 
+  #patriotText {
+    padding-bottom: 0px;
+  }
   .flow-text{
     font-size: 3vw;
   }
   #unemploymentIcon {
     width:40%;
+    margin-top: 0px;
   }
   .alaska {
     width: 50%;
@@ -1031,4 +1059,16 @@ p {
 .row16 {
   top: 0;
   margin-bottom: 0;
+}
+
+.codepen img {
+  width: 18%;
+}
+
+.github img {
+  width: 15%;
+}
+
+.followText {
+  font-size: 2.5vw;
 }
