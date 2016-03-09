@@ -26,6 +26,11 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.brand-logo {
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+}
+
 /*section {
   width: 100%;
   padding: 0 7%;
@@ -98,19 +103,6 @@ footer {
 .github {
   margin-bottom: 5px;
 }
-
-/*.clouds footer {
-  position: absolute;
-  bottom: 5em;
-  width: 100%;
-  margin-left: -50%;
-  left: 50%;
-}
-
-.clouds footer img {
-  max-width: 50%;
-  height: auto;
-}*/
 
 /*/////////////////////////////////////////////////*/
 /*Responsive Flow Text Settings for entire project */
@@ -933,6 +925,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 #armedForcesBox{
   padding: 0px 15px 15px 15px;
+  margin-bottom: 1%;
 
 }
 

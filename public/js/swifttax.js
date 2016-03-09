@@ -346,9 +346,9 @@ $(".nextBtn1").hide();
 });
       $(".nextBtnRefund").click(function(){
     $('#modal16').closeModal({out_duration: 0,});
-    $(".taxform").hide();
-    $("#coolComputer").hide();
-    $(".macDaddy").hide();
+    // $(".taxform").hide();
+    // $("#coolComputer").hide();
+    // $(".macDaddy").hide();
     $('#mainStuff').hide();
     $('#modal19').show();
      $("html,body").scrollTop(0);
