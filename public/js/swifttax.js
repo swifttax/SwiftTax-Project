@@ -340,6 +340,7 @@ $(".nextBtn1").hide();
     $("#coolComputer").hide();
     $("#splashPage").hide();
     $(".macDaddy").hide();
+    $('#mainStuff').hide();
     $('#modal17').show();
     $('html,body').scrollTop(0);
 
@@ -352,6 +353,7 @@ $(".nextBtn1").hide();
     $("#coolComputer").show();
     $("#splashPage").show();
     $(".macDaddy").show();
+     $("html,body").scrollTop(0);
    
 
     });
@@ -364,8 +366,12 @@ $(".nextBtn1").hide();
     $("#coolComputer").hide();
     $("#splashPage").hide();
     $(".macDaddy").hide();
+    $('#mainStuff').hide();
     $('#modal19').show();
     $('html,body').scrollTop(0);
+     $("html,body").scrollTop(0);
+     // $('html,body').scrollTop(0);
+
 
   });
     
@@ -408,6 +414,8 @@ $(".nextBtn18").click(function(){
       $(".taxform").show();
       $("#coolComputer").show();
       $("#splashPage").show();
+      $("#mainStuff").show();
+
   });
 $(".backBtn18").click(function(){
       $('#modal18').closeModal({out_duration: 0,});
@@ -422,7 +430,11 @@ $(".nextBtn20").click(function(){
       $('#modal20').closeModal({out_duration: 0,});
       $(".taxform").show();
       $("#coolComputer").show();
+
         $("#splashPage").show();
+
+      $("#mainStuff").show();
+
 
   });
 $(".backBtn20").click(function(){
@@ -546,7 +558,7 @@ $(".backBtn20").click(function(){
              
             marker = new google.maps.Marker({
               map: map,
-              draggable: false,
+              draggable: true,
               animation: google.maps.Animation.DROP,
               position: jobLatLng,
               icon: letterIcon
