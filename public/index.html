@@ -13,7 +13,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-  <script src="js/swifttaxrefund.js"></script>
+<!--   // <script src="js/swifttaxrefund.js"></script> -->
    <!-- <script src="js/swifttaxowe.js"></script> -->
   <script src="js/swifttax.js"></script>
   <script src="js/materializeFull.js"></script>
@@ -412,7 +412,7 @@
   <div class="yourName row">
     <p class="flow-text center">What is your Last Name?</p>
     <div class="col-sm-8 col-sm-offset-2">
-      <input type="text" class="form-control" id="inputLastName">
+      <input type="text" class="form-control" id="inputLastName" autocomplete="off">
       <p id="validLastNameCheck" class="shake animated">Please enter a valid last name</p>
     </div>
   </div>
@@ -468,7 +468,7 @@
   <div class="yourName row">
     <p class="flow-text center">What is your current occupation</p>
     <div class="col-sm-8 col-sm-offset-2">
-      <input type="text" class="form-control" id="inputOccupation">
+      <input type="text" class="form-control" id="inputOccupation" autocomplete="off">
       <p id="validOccupationCheck" class="shake animated">Please enter a valid occupation</p>
     </div>
   </div>
@@ -513,7 +513,7 @@
 
 <div id="modal3" class="modal modal-fixed">
   <div class="modal-content">
-    <p id="inputNameValue" class="blueText flow-text center">First, let's kick things off with a few questions about your income.</p>
+    <p id="inputNameValue2" class="blueText flow-text center">First, let's kick things off with a few questions about your income.</p>
   </div>
   <div class="blueLine center"></div>
   <div class="yourName row">
@@ -532,7 +532,7 @@
 
 <div id="modal4" class="modal modal-fixed">
   <div class="modal-content">
-    <p id="inputNameValue" class="blueText flow-text center">Enter your wages, salaries &amp; tips</p>
+    <p id="inputNameValue3" class="blueText flow-text center">Enter your wages, salaries &amp; tips</p>
   </div>
   <div class="blueLine center"></div>
   <div class="yourName row">
@@ -541,7 +541,7 @@
        <div class="col-sm-4 col-sm-offset-4">
          <div class="input-group">
           <div class="input-group-addon" for="inputWages">$</div>
-          <input type="text" class="form-control" id="inputWages" name="inputWages">
+          <input type="text" class="form-control" id="inputWages" name="inputWages" value="0" autocomplete="off">
         </div>
       </div>
     </form>
@@ -573,7 +573,7 @@
       </div> -->
           <div class="input-group">
             <div class="input-group-addon" for="inputInterest">$</div>
-            <input type="text" class="form-control inputInterest" id="inputInterest" name="inputInterest">
+            <input type="text" class="form-control inputInterest" id="inputInterest" name="inputInterest" value="0" autocomplete="off">
           </div>
         </div>
 
@@ -616,7 +616,7 @@
 
           <div class="input-group">
               <div class="input-group-addon" for="inputUnemp">$</div>
-              <input type="text" class="form-control inputUnemp" id="inputUnemp" name="inputUnemp">
+              <input type="text" class="form-control inputUnemp" id="inputUnemp" name="inputUnemp" value="0" autocomplete="off">
             </div>
         
 
@@ -655,7 +655,7 @@
       
             <div class="input-group">
               <div class="input-group-addon" for="inputAlaska">$</div>
-              <input type="text" class="form-control" id="inputAlaska" name="inputAlaska">
+              <input type="text" class="form-control" id="inputAlaska" name="inputAlaska" value="0" autocomplete="off">
             </div>
 
 
@@ -781,7 +781,7 @@
           <input type="text" class="form-control" display="inline" id="withholdingsInput">
  -->        <div class="input-group">
               <div class="input-group-addon" for="withholdingsInput">$</div>
-              <input type="text" class="form-control" id="withholdingsInput" name="withholdingsInput">
+              <input type="text" class="form-control" id="withholdingsInput" name="withholdingsInput" value="0" autocomplete="off">
             </div>
 
         </div>
@@ -846,7 +846,7 @@
         <input type="text" class="form-control" display="inline" id="inputCombat"> -->
       <div class="input-group">
               <div class="input-group-addon" for="inputCombat">$</div>
-              <input type="text" class="form-control" id="inputCombat" name="inputCombat">
+              <input type="text" class="form-control" id="inputCombat" name="inputCombat" value="0" autocomplete="off">
             </div>
 
       </div>
@@ -979,35 +979,35 @@
 
 <!-- Final Form (Hidden!) -->
 <form id="finalForm" name="finalForm" autocomplete="off" action="pdfgenerator.php" method="post">
-      boxfirstName <input name="boxfirstName" type="text" id="boxfirstName"><br>
-      boxlastName <input name="boxlastName" type="text" id="boxlastName"><br>
-      box_ssn <input name="box_ssn" type="text" id="box_ssn"><br>
-      box_nameFirstSpouse <input name="box_nameFirstSpouse" type="text" id="box_nameFirstSpouse"><br>
-      box_nameLastSpouse <input name="box_nameLastSpouse" type="text" id="box_nameLastSpouse"><br>
-      box_spouse_social <input name="box_spouse_social" type="text" id="box_spouse_social"><br>
-      box_street <input name="box_street" type="text" id="box_street"><br>
-      box_apt_no <input name="box_apt_no" type="text" id="box_apt_no"><br>
-      box_city <input name="box_city" type="text" id="box_city"><br>
-      1 <input name="box1" type="text" id="box1"><br>
-      2 <input name="box2" type="text" id="box2"><br>
-      3 <input name="box3" type="text" id="box3"><br>
-      4 <input name="box4" type="text" readonly id="box4">
-      5 <input name="box5" type="text" id="box5" readonly><br>
-      6<input name="box6" type="text" id="box6" readonly>
-      7 <input name="box7" type="text" id="box7"><br>
-      8a <input name="box8a" type="text" id="box8a"><br>
-      8b <input name="box8b" type="text" id="box8b"><br>
+      boxfirstName <input name="boxfirstName" type="text" id="boxfirstName" autocomplete="off"><br>
+      boxlastName <input name="boxlastName" type="text" id="boxlastName" autocomplete="off"><br>
+      box_ssn <input name="box_ssn" type="text" id="box_ssn" autocomplete="off"><br>
+      box_nameFirstSpouse <input name="box_nameFirstSpouse" type="text" id="box_nameFirstSpouse" autocomplete="off"><br>
+      box_nameLastSpouse <input name="box_nameLastSpouse" type="text" id="box_nameLastSpouse" autocomplete="off"><br>
+      box_spouse_social <input name="box_spouse_social" type="text" id="box_spouse_social" autocomplete="off"><br>
+      box_street <input name="box_street" type="text" id="box_street" autocomplete="off"><br>
+      box_apt_no <input name="box_apt_no" type="text" id="box_apt_no" autocomplete="off"><br>
+      box_city <input name="box_city" type="text" id="box_city" autocomplete="off"><br>
+      1 <input name="box1" type="text" id="box1" autocomplete="off"><br>
+      2 <input name="box2" type="text" id="box2" autocomplete="off"><br>
+      3 <input name="box3" type="text" id="box3" autocomplete="off"><br>
+      4 <input name="box4" type="text" readonly id="box4" autocomplete="off">
+      5 <input name="box5" type="text" id="box5" readonly autocomplete="off"><br>
+      6<input name="box6" type="text" id="box6" readonly autocomplete="off">
+      7 <input name="box7" type="text" id="box7" autocomplete="off"><br>
+      8a <input name="box8a" type="text" id="box8a" autocomplete="off"><br>
+      8b <input name="box8b" type="text" id="box8b" autocomplete="off"><br>
       <!-- Nontaxable Combat Pay election <input type="text" id="combatPay"><br> -->
     <!-- <input name="9" type="button" id="creditsButton" value="Calculate Credits"> -->
-      9 <input name="box9" type="text" id="box9" readonly></input><br>
+      9 <input name="box9" type="text" id="box9" readonly autocomplete="off"></input><br>
       <!-- 10 <input name="10" type="button" id="taxCalcButton" value="Calculate Preliminary Tax"> -->
-      10 <input name="box10" type="text" id="box10" readonly></input><br>
-      11<input name="box11" type="text" id="box11" readonly><br>
+      10 <input name="box10" type="text" id="box10" readonly autocomplete="off"></input><br>
+      11<input name="box11" type="text" id="box11" readonly autocomplete="off"><br>
       <!-- <input type="button" id="totalTaxButton" value="Calculate Total Tax"> -->
-      12 <input name="box12" type="text" id="box12" readonly><br>
-      13a<input name="box13a" type="text" id="box13a" readonly><br>
-      14 <input name="box14" type="text" id="box14" readonly>
-      Occupation <input name="boxOccupation" type="text" id="boxOccupation" readonly>
+      12 <input name="box12" type="text" id="box12" readonly autocomplete="off"><br>
+      13a<input name="box13a" type="text" id="box13a" readonly autocomplete="off"><br>
+      14 <input name="box14" type="text" id="box14" readonly autocomplete="off">
+      Occupation <input name="boxOccupation" type="text" id="boxOccupation" readonly autocomplete="off">
       <input type="button" id="fillButton" value="Fill all Values">
       <input type="submit" id="finalButton" value="Submit to PDF">
   </form>
@@ -1114,9 +1114,9 @@
         }
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKYj_O-hmy5dWj8WcUYkYQL1Bq2tCwA3Y&libraries=places&callback=initAutocomplete"
-        async defer></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKYj_O-hmy5dWj8WcUYkYQL1Bq2tCwA3Y&libraries=places&callback=initAutocomplete"
+       async defer></script>
 
 
   

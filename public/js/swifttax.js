@@ -10,6 +10,17 @@ $("#combatPay").hide();
 $("#returnOwePage").hide();
 
 $(document).ready(function(){
+       // function initMap() {
+       //    map = new google.maps.Map(document.getElementById('map'), {
+       //      center: {
+       //        lat: 29.4267860,
+       //        lng: -98.4895760
+       //      },
+       //      zoom: 10,
+       //      draggable: true
+       //    });
+       //  };
+       //  initMap();
   $("#validOccupationCheck").hide();
   $("#address").hide();
   $("#finalForm").hide();
@@ -483,7 +494,8 @@ if((/[a-z]/ig).test($("#inputSSN").val())) {
   });
 
       $(".nextBtnOwe").click(function(){
-      jobGetRequest();
+      // jobGetRequest();
+      indeedFunction();
     $(".taxesOwed").text(finalOwe);
     $('#modal16').closeModal({out_duration: 0,});
     $(".taxform").hide();
@@ -494,6 +506,11 @@ if((/[a-z]/ig).test($("#inputSSN").val())) {
     $('#modal17').show();
     $('html,body').scrollTop(0);
     console.log("owe button clicked");
+    // recenterMapFunction();
+  google.maps.event.addListenerOnce(map, 'idle', function() {
+  google.maps.event.trigger(map, 'resize'); });
+    // var reCenter = new google.maps.LatLng(29.4267860, -98.4895760);
+    // map.setCenter(reCenter);
   });
 
     $("#oweBackBtn").click(function(){
@@ -506,6 +523,7 @@ if((/[a-z]/ig).test($("#inputSSN").val())) {
      $("html,body").scrollTop(0);
     });
      $(".nextBtnRefund").click(function(){
+   
     $("#refundOwed").text(finalRefund);
     $('#modal16').closeModal({out_duration:0,});
     $('#mainStuff').hide();
@@ -579,168 +597,164 @@ $(".backBtn20").click(function(){
       $("#modal19").show();
 
   });
-// Indeed API //
+// // Indeed API //
 
-     function animatedBoxes(){
-  $(".box1").addClass('animated fadeInLeftBig');
-  var options = [
-      {selector: '.box1', offset: 0, callback: 'Materialize.fadeInImage("animatedBoxes"()' }
-  ];
-    Materialize.scrollFire(options);
-};
+//      function animatedBoxes(){
+//   $(".box1").addClass('animated fadeInLeftBig');
+//   var options = [
+//       {selector: '.box1', offset: 0, callback: 'Materialize.fadeInImage("animatedBoxes"()' }
+//   ];
+//     Materialize.scrollFire(options);
+// };
 
-var markersArray = [];
-var jobLatLng;
-var map;
-var zip = 78234;
-var currentLatLng = {
-  lat: 29.426786, 
-  lng: -98.489576
-}
-var jobTitle;
-var query;
-var jobUrl;
+// var markersArray = [];
+// var jobLatLng;
+// var map;
+// var zip = 78234;
+// var currentLatLng = {
+//   lat: 29.426786, 
+//   lng: -98.489576
+// }
+// var jobTitle;
+// var query;
+// var jobUrl;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: currentLatLng,
-    zoom: 10,
-    draggable: true
-  });
-  console.log("map initialized");
-};
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: currentLatLng,
+//     zoom: 10,
+//     draggable: true
+//   });
+//   console.log("map initialized");
+// };
 
-// initMap();
+// // initMap();
 
-google.maps.event.addListenerOnce(map, 'idle', function() {
-google.maps.event.trigger(map, 'resize');
-});
+// google.maps.event.addListenerOnce(map, 'idle', function() {
+// google.maps.event.trigger(map, 'resize');
+// });
 
-function xmlToJson(xml) {
-  var obj = {};
-  if (xml.nodeType == 1) { 
-    if (xml.attributes.length > 0) {
-    obj["@attributes"] = {};
-      for (var j = 0; j < xml.attributes.length; j++) {
-        var attribute = xml.attributes.item(j);
-        obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
-      }
-    }
-  } else if (xml.nodeType == 3) {
-    obj = xml.nodeValue;
-  }
-  if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
-    obj = xml.childNodes[0].nodeValue;
-  }
-  else if (xml.hasChildNodes()) {
-    for(var i = 0; i < xml.childNodes.length; i++) {
-      var item = xml.childNodes.item(i);
-      var nodeName = item.nodeName;
-      if (typeof(obj[nodeName]) == "undefined") {
-        obj[nodeName] = xmlToJson(item);
-      } else {
-        if (typeof(obj[nodeName].push) == "undefined") {
-          var old = obj[nodeName];
-          obj[nodeName] = [];
-          obj[nodeName].push(old);
-        }
-        obj[nodeName].push(xmlToJson(item));
-      }
-    }
-  }
-  return obj;
-};
+// function xmlToJson(xml) {
+//   var obj = {};
+//   if (xml.nodeType == 1) { 
+//     if (xml.attributes.length > 0) {
+//     obj["@attributes"] = {};
+//       for (var j = 0; j < xml.attributes.length; j++) {
+//         var attribute = xml.attributes.item(j);
+//         obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+//       }
+//     }
+//   } else if (xml.nodeType == 3) {
+//     obj = xml.nodeValue;
+//   }
+//   if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
+//     obj = xml.childNodes[0].nodeValue;
+//   }
+//   else if (xml.hasChildNodes()) {
+//     for(var i = 0; i < xml.childNodes.length; i++) {
+//       var item = xml.childNodes.item(i);
+//       var nodeName = item.nodeName;
+//       if (typeof(obj[nodeName]) == "undefined") {
+//         obj[nodeName] = xmlToJson(item);
+//       } else {
+//         if (typeof(obj[nodeName].push) == "undefined") {
+//           var old = obj[nodeName];
+//           obj[nodeName] = [];
+//           obj[nodeName].push(old);
+//         }
+//         obj[nodeName].push(xmlToJson(item));
+//       }
+//     }
+//   }
+//   return obj;
+// };
 
 
-function jobGetRequest(){
-  jobTitle = $("#boxOccupation").val();
-  query = ($.trim(jobTitle)).replace(/\s/g, "+");
-  console.log(query);
-  jobUrl = "http://api.indeed.com/ads/apisearch?publisher=6167575085685252&q=" + query + "&l=" + zip + "&sort=&radius=&st=&jt=&start=&limit=3&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2";
-  $.get(jobUrl)
-    .done(function(data){
+// function jobGetRequest(){
+//   jobTitle = "lawyer";
+//   query = ($.trim(jobTitle)).replace(/\s/g, "+");
+//   console.log(query);
+//   jobUrl = "http://api.indeed.com/ads/apisearch?publisher=6167575085685252&q=" + query + "&l=" + zip + "&sort=&radius=&st=&jt=&start=&limit=3&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2";
+//   $.get(jobUrl)
+//     .done(function(data){
       
-      console.log(data);
-      var jobsJson = xmlToJson(data);
-      console.log(jobsJson);
-      var jobsArray = jobsJson.response.results.result;
+//       console.log(data);
+//       var jobsJson = xmlToJson(data);
+//       console.log(jobsJson);
+//       var jobsArray = jobsJson.response.results.result;
       
-      jobsArray.forEach(function(element,index){
-        console.log(index);
-        console.log("______________________");
-        console.log("______________________");
-        console.log("Job Title: " + element.jobtitle);
-        console.log("Employer: " + element.company);
-        console.log("Posted " + element.formattedRelativeTime);
-        console.log(element.latitude + ", " + element.longitude);
-        $("#jobTitle" + index).text(element.jobtitle);
-        $("#employer" + index).text(element.company);
-        $("#posted" + index).text(element.formattedRelativeTime);
-        $("#applyBtn" + index).prop("bacon", element.url);
-        // console.log($(".box" + index).prop("bacon"));
-        console.log($("#applyBtn" + index).prop("bacon"));
+//       jobsArray.forEach(function(element,index){
+//         console.log(index);
+//         console.log("______________________");
+//         console.log("______________________");
+//         console.log("Job Title: " + element.jobtitle);
+//         console.log("Employer: " + element.company);
+//         console.log("Posted " + element.formattedRelativeTime);
+//         console.log(element.latitude + ", " + element.longitude);
+//         $("#jobTitle" + index).text(element.jobtitle);
+//         $("#employer" + index).text(element.company);
+//         $("#posted" + index).text(element.formattedRelativeTime);
+//         $("#applyBtn" + index).prop("bacon", element.url);
+//         // console.log($(".box" + index).prop("bacon"));
+//         console.log($("#applyBtn" + index).prop("bacon"));
         
-        jobLatLng = {
-          lat: parseFloat(element.latitude),
-          lng: parseFloat(element.longitude)
-        };
-        console.log(currentLatLng);
-        console.log(jobLatLng);
+//         jobLatLng = {
+//           lat: parseFloat(element.latitude),
+//           lng: parseFloat(element.longitude)
+//         };
+//         console.log(currentLatLng);
+//         console.log(jobLatLng);
 
-        if (index == 0) {
-          letterIcon = "/img/markera.png";
-          title = "A";
-        }
-        else if (index == 1) {
-          letterIcon = "/img/markerb.png";
-          title = "B";
-        }
-        else {
-          letterIcon = "/img/markerc.png";
-          title = "C"
-        }
-        marker = new google.maps.Marker({
-              setMap: map,
-              draggable: true,
-              animation: google.maps.Animation.DROP,
-              position: jobLatLng,
-              icon: letterIcon
-            });
+//         if (index == 0) {
+//           letterIcon = "/img/markera.png";
+//           title = "A";
+//         }
+//         else if (index == 1) {
+//           letterIcon = "/img/markerb.png";
+//           title = "B";
+//         }
+//         else {
+//           letterIcon = "/img/markerc.png";
+//           title = "C"
+//         }
+//         marker = new google.maps.Marker({
+//               setMap: map,
+//               draggable: true,
+//               animation: google.maps.Animation.DROP,
+//               position: jobLatLng,
+//               icon: letterIcon
+//             });
       
-           google.maps.event.trigger(map, 'resize');
-          map.setCenter(currentLatLng);
-          map.setZoom(10);
-      })
-
-
-
-
+//            google.maps.event.trigger(map, 'resize');
+//           map.setCenter(currentLatLng);
+//           map.setZoom(10);
+//       })
       
 
-      $("body").on("click", "#applyBtn0", function(){
-        open($("#applyBtn0").prop("bacon"));
-        console.log("clicked");
-        console.log($("#applyBtn0").prop("bacon"));
-      });
-      $("body").on("click", "#applyBtn1", function(){
-        open($("#applyBtn1").prop("bacon"));
-        console.log("clicked");
-        console.log($("#applyBtn1").prop("bacon"));
-      });
-      $("body").on("click", "#applyBtn2", function(){
-        open($("#applyBtn2").prop("bacon"));
-        console.log("clicked");
-        console.log($("#applyBtn2").prop("bacon"));
-      });
-    });
-    function animatedBoxes(){
-      $(".box1").addClass('animated fadeInLeftBig');
-      var options = [
-        {selector: '.box1', offset: 0, callback: 'Materialize.fadeInImage("animatedBoxes"()' }
-      ];
-      Materialize.scrollFire(options);
-    };
-  };
+//       $("body").on("click", "#applyBtn0", function(){
+//         open($("#applyBtn0").prop("bacon"));
+//         console.log("clicked");
+//         console.log($("#applyBtn0").prop("bacon"));
+//       });
+//       $("body").on("click", "#applyBtn1", function(){
+//         open($("#applyBtn1").prop("bacon"));
+//         console.log("clicked");
+//         console.log($("#applyBtn1").prop("bacon"));
+//       });
+//       $("body").on("click", "#applyBtn2", function(){
+//         open($("#applyBtn2").prop("bacon"));
+//         console.log("clicked");
+//         console.log($("#applyBtn2").prop("bacon"));
+//       });
+//     });
+//     function animatedBoxes(){
+//       $(".box1").addClass('animated fadeInLeftBig');
+//       var options = [
+//         {selector: '.box1', offset: 0, callback: 'Materialize.fadeInImage("animatedBoxes"()' }
+//       ];
+//       Materialize.scrollFire(options);
+//     };
+//   };
 
 // Amazon API Call //
 
@@ -856,6 +870,187 @@ myDataRef.on('value', function(snapshot) {
   });
 
 });
+
+// Indeed!==========================================
+  var markersArray = [];
+      var jobLatLng;
+      var map;
+      var zip = 78234;
+      var currentLatLng = {
+        lat: 29.4267860,
+        lng: -98.4895760
+      }
+    function indeedFunction(){
+      // var markersArray = [];
+      // var jobLatLng;
+      // var map;
+      // var zip = 78234;
+      // var currentLatLng = {
+      //   lat: 29.4267860,
+      //   lng: -98.4895760
+      // }
+
+      var jobTitle = $("#inputOccupation").val();
+      var query = ($.trim(jobTitle)).replace(/\s/g, "+");
+      console.log(query);
+      var jobUrl = "http://api.indeed.com/ads/apisearch?publisher=6167575085685252&q=" + query + "&l=" + zip + "&sort=&radius=&st=&jt=&start=&limit=3&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2";
+        
+     function initMap() {
+          var latUSA = 39.833333;
+          var lngUSA = -98.583333;
+          var latlngUSA = {lat: latUSA, lng: lngUSA};
+          console.log(latlngUSA);
+          map = new google.maps.Map(document.getElementById('map'), {
+            // center: {lat: -34.397, lng: 150.644},
+            center: currentLatLng,
+            zoom: 10,
+            draggable: true
+          });
+        };
+        initMap();
+
+
+      function xmlToJson(xml) {
+        var obj = {};
+        if (xml.nodeType == 1) { // element
+          // do attributes
+          if (xml.attributes.length > 0) {
+          obj["@attributes"] = {};
+            for (var j = 0; j < xml.attributes.length; j++) {
+              var attribute = xml.attributes.item(j);
+              obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+            }
+          }
+        } else if (xml.nodeType == 3) { // text
+          obj = xml.nodeValue;
+        }
+        if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
+          obj = xml.childNodes[0].nodeValue;
+        }
+        else if (xml.hasChildNodes()) {
+          for(var i = 0; i < xml.childNodes.length; i++) {
+            var item = xml.childNodes.item(i);
+            var nodeName = item.nodeName;
+            if (typeof(obj[nodeName]) == "undefined") {
+              obj[nodeName] = xmlToJson(item);
+            } else {
+              if (typeof(obj[nodeName].push) == "undefined") {
+                var old = obj[nodeName];
+                obj[nodeName] = [];
+                obj[nodeName].push(old);
+              }
+              obj[nodeName].push(xmlToJson(item));
+            }
+          }
+        }
+        return obj;
+      };
+
+      $.get(jobUrl)
+        .done(function(data){
+          
+          console.log(data);
+          var jobsJson = xmlToJson(data);
+          console.log(jobsJson);
+          var jobsArray = jobsJson.response.results.result;
+          map.panTo(currentLatLng);
+          map.setZoom(10);
+          // var homeImg = 'BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE';
+          // var infowindow = new google.maps.InfoWindow({
+          //   map: map,
+          //   position: currentLatLng,
+          //   content: "You are here."
+          // });
+          jobsArray.forEach(function(element,index){
+            console.log(index);
+            console.log("______________________");
+            console.log("______________________");
+            console.log("Job Title: " + element.jobtitle);
+            console.log("Employer: " + element.company);
+            console.log("Posted " + element.formattedRelativeTime);
+            console.log(element.latitude + ", " + element.longitude);
+            // jobLatLng = [element.latitude, element.longitude];
+            $("#jobTitle" + index).text(element.jobtitle);
+            $("#employer" + index).text(element.company);
+            $("#posted" + index).text(element.formattedRelativeTime);
+            $("#applyBtn" + index).prop("bacon", element.url);
+            console.log($("#applyBtn" + index).prop("bacon"));
+
+            
+            jobLatLng = {
+              lat: parseFloat(element.latitude),
+              lng: parseFloat(element.longitude)
+            };
+            $("#applyBtn" + index).prop("sausage", jobLatLng);
+            console.log(currentLatLng);
+            console.log(jobLatLng);
+
+              if (index == 0) {
+                letterIcon = "/img/markera.png";
+                title = "A";
+              }
+              else if (index == 1) {
+                letterIcon = "/img/markerb.png";
+                title = "B";
+              }
+              else {
+                letterIcon = "/img/markerc.png";
+                title = "C"
+              }
+             
+            
+            marker = new google.maps.Marker({
+              map: map,
+              draggable: false,
+              animation: google.maps.Animation.DROP,
+              position: jobLatLng,
+              icon: letterIcon
+            });
+            google.maps.event.addListenerOnce(map, 'idle', function() {
+google.maps.event.trigger(map, 'resize'); });
+        })
+
+// $("body").on("click", ".deleteBtn",function(){
+
+$("body").on("click", "#applyBtn0", function(){
+    open($("#applyBtn0").prop("bacon"));
+    console.log("clicked");
+    console.log($("#applyBtn0").prop("bacon"));
+  });
+$("body").on("click", "#applyBtn1", function(){
+    open($("#applyBtn1").prop("bacon"));
+    console.log("clicked");
+    console.log($("#applyBtn1").prop("bacon"));
+  });
+$("body").on("click", "#applyBtn2", function(){
+    open($("#applyBtn2").prop("bacon"));
+    console.log("clicked");
+    console.log($("#applyBtn2").prop("bacon"));
+  });
+
+
+      
+  // console.log($(".box1").name());
+  
+});
+// map.panTo(currentLatLng);
+// map.setZoom(10);
+var currCenter = map.getCenter();
+console.log(currCenter);
+map.setCenter(currCenter);
+// map.setZoom(10);
+console.log("recentered");
+};
+// indeedFunction();
+
+function recenterMapFunction() {
+var currCenter = map.getCenter();
+map.setCenter(currCenter);
+map.setZoom(10);
+console.log("recentered");
+}
+
+
  // Hidden Form JS 
 
  var dependentStatus;
@@ -883,16 +1078,16 @@ var unemploymentAlaska;
       console.log($("#box_city").val());
       $("#box1").val($("#inputWages").val());
       $("#box2").val($("#inputInterest").val());
-      $("#box3").val(unemploymentAlaska);
-      $("#box4").val(totalIncome);
-      $("#box5").val(standardDeduction);
-      $("#box6").val(taxableIncome);
+      $("#box3").val(unemploymentAlaska.toFixed(2));
+      $("#box4").val(totalIncome.toFixed(2));
+      $("#box5").val(standardDeduction.toFixed(2));
+      $("#box6").val(taxableIncome.toFixed(2));
       $("#box7").val($("#withholdingsInput").val());
-      $("#box8a").val(eic);
+      $("#box8a").val(eic.toFixed(2));
       $("#box8b").val($("#inputCombat").val());
-      $("#box9").val(totalCredits);
-      $("#box10").val(prelimTaxTotal);
-      $("#box11").val(healthTax);
+      $("#box9").val(totalCredits.toFixed(2));
+      $("#box10").val(prelimTaxTotal.toFixed(2));
+      $("#box11").val(healthTax.toFixed(2));
       $("#box12").val(totalTax);
       $("#box13a").val(finalRefund);
       $("#box14").val(finalOwe);
@@ -1128,12 +1323,12 @@ var unemploymentAlaska;
     function totalTaxFunction(){
       if (healthInsurance){
         healthTax = 0;
-        totalTax = prelimTaxTotal.toFixed(2);
+        totalTax = prelimTaxTotalRound;
       }
       else {
         healthTax = 750;
-        totalTax = (prelimTaxTotal + 750)
-        totalTaxRound = totalTax.toFixed(2);
+        totalTax = (prelimTaxTotal + 750).toFixed(2);
+        totalTaxRound = totalTax;
       }
     };
 
