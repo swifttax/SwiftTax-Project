@@ -495,7 +495,7 @@ if((/[a-z]/ig).test($("#inputSSN").val())) {
 
       $(".nextBtnOwe").click(function(){
       // jobGetRequest();
-      indeedFunction();
+      // indeedFunction();
     $(".taxesOwed").text(finalOwe);
     $('#modal16').closeModal({out_duration: 0,});
     $(".taxform").hide();
@@ -504,6 +504,7 @@ if((/[a-z]/ig).test($("#inputSSN").val())) {
     $(".macDaddy").hide();
     $('#mainStuff').hide();
     $('#modal17').show();
+     indeedFunction();
     $('html,body').scrollTop(0);
     console.log("owe button clicked");
     // recenterMapFunction();
