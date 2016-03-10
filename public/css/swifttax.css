@@ -233,7 +233,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 .modal {
 	/*padding-top: 5%;*/
 	background-color: #ffffff;
-  overflow-y: hidden !important; 
+  /*overflow-y: hidden !important; */
   padding: 10px;
 }
 .modal-content {
