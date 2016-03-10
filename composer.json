@@ -1,0 +1,12 @@
+{
+    "name": "kendrickgardner/swifttax.dev",
+    "authors": [
+        {
+            "name": "Kendrick Gardner",
+            "email": "kbgar24@gmail.com"
+        }
+    ],
+    "require": {
+        "mikehaertl/php-pdftk": "^0.2.4"
+    }
+}

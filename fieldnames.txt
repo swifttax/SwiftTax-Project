@@ -1,0 +1,414 @@
+---
+FieldType: Text
+FieldName: deposited See instructions and fill in 13b 13c and 13d or Form 8888  b Routing number  c  Type Checking Savings  d Account number
+FieldNameAlt: deposited! See instructions and fill in 13b, 13c, and 13d, or Form 8888.  b Routing number  c  Type: Checking Savings  d Account number
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Yes Complete below
+FieldNameAlt: Yes. Complete below
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: No
+FieldNameAlt: No
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: undefined
+FieldNameAlt: undefined
+FieldFlags: 25165824
+FieldJustification: Left
+FieldMaxLength: 5
+---
+FieldType: Text
+FieldName: Your signature
+FieldNameAlt: Your signature
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date
+FieldNameAlt: Date
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Your occupation
+FieldNameAlt: Your occupation
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Daytime phone number
+FieldNameAlt: Daytime phone number
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_2
+FieldNameAlt: Date
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Spouses occupation
+FieldNameAlt: Spouse&#8217;s occupation
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: If the IRS sent you an Identity Protection
+FieldNameAlt: If the IRS sent you an Identity Protection
+FieldFlags: 25165824
+FieldJustification: Left
+FieldMaxLength: 4
+---
+FieldType: Text
+FieldName: PrintType preparers name
+FieldNameAlt: Print/Type preparer&#8217;s name
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Preparers signature
+FieldNameAlt: Preparer&#8217;s signature
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_3
+FieldNameAlt: Date
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: if
+FieldNameAlt: if
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: PTIN
+FieldNameAlt: PTIN
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Firms name
+FieldNameAlt: Firm&#8217;s name
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Firms EIN
+FieldNameAlt: Firm&#8217;s EIN
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Firms address
+FieldNameAlt: Firm&#8217;s address
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Phone no
+FieldNameAlt: Phone no.
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: instructions
+FieldNameAlt: instructions
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: undefined_2
+FieldNameAlt: undefined
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: A
+FieldNameAlt: A
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: C
+FieldNameAlt: C
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: D
+FieldNameAlt: D
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: E
+FieldNameAlt: E
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: F
+FieldNameAlt: F
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: G
+FieldNameAlt: G
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Mailing
+FieldNameAlt: Mailing
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: last_name
+FieldNameAlt: Last name
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ssn
+FieldNameAlt: Your social security number
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: spouse_last
+FieldNameAlt: Last name
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: spouse_social
+FieldNameAlt: Spouse&#8217;s social security number
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: spouse_first_initial
+FieldNameAlt: If a joint return, spouse&#8217;s first name and initial
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: street
+FieldNameAlt: Home address (number and street). If you have a P.O. box, see instructions.
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: apt_no
+FieldNameAlt: Apt. no.
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: city
+FieldNameAlt: City, town or post office, state, and ZIP code. If you have a foreign address, also complete spaces below (see instructions).
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: foreign_country
+FieldNameAlt: Foreign country name
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: foreign_state
+FieldNameAlt: Foreign province/state/county
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: foreign_postal
+FieldNameAlt: Foreign postal code
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 1
+FieldNameAlt: Income 1 Wages, salaries, and tips. This should be shown in box 1 of your Form(s) W-2. Attach your Form(s) W-2. 1
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 2
+FieldNameAlt: 2 Taxable interest. If the total is over $1,500, you cannot use Form 1040EZ. 2
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 3
+FieldNameAlt: 3 Unemployment compensation and Alaska Permanent Fund dividends (see instructions). 3
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 4
+FieldNameAlt: 4 Add lines 1, 2, and 3. This is your adjusted gross income. 4
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: youPEC
+FieldNameAlt: You
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: spousePEC
+FieldNameAlt: Spouse
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: you
+FieldNameAlt: You
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: spouse
+FieldNameAlt: Spouse
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: 5
+FieldNameAlt: 5 If someone can claim you (or your spouse if a joint return) as a dependent, check the applicable box(es) below and enter the amount from the worksheet on back. You Spouse If no one can claim you (or your spouse if a joint return), enter $10,300 if single; $20,600 if married filing jointly. See back for explanation. 5
+FieldFlags: 4096
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 6
+FieldNameAlt: 6 Subtract line 5 from line 4. If line 5 is larger than line 4, enter -0-. This is your taxable income.  6
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 7
+FieldNameAlt: 7 Federal income tax withheld from Form(s) W-2 and 1099. 7
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 9
+FieldNameAlt: Presidential Election Campaign Check here if you, or your spouse if filing jointly, want $3 to go to this fund. Checking a box below will not change your tax or refund. You Spouse_Row_9
+FieldFlags: 0
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: 10
+FieldNameAlt: 10 Tax. Use the amount on line 6 above to find your tax in the tax table in the instructions. Then, enter the tax from the table on this line. 10
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 8a
+FieldNameAlt: 8a Earned income credit (EIC)  (see instructions) 8a
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: full_coverage
+FieldNameAlt: 11 Health care: individual responsibility (see instructions) Full-year coverage
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: 11
+FieldNameAlt: Presidential Election Campaign Check here if you, or your spouse if filing jointly, want $3 to go to this fund. Checking a box below will not change your tax or refund. You Spouse_Row_11
+FieldFlags: 0
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: 12
+FieldNameAlt: 12 Add lines 10 and 11. This is your total tax. 12
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: form_8888
+FieldNameAlt: If line 9 is larger than line 12, subtract line 12 from line 9. This is your refund
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: 13a
+FieldNameAlt: Refund 13a If line 9 is larger than line 12, subtract line 12 from line 9. This is your refund. If Form 8888 is attached, check here   13a
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: routing
+FieldNameAlt: Routing number
+FieldFlags: 25165824
+FieldJustification: Left
+FieldMaxLength: 9
+---
+FieldType: Button
+FieldName: checkings
+FieldNameAlt: c  Type
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: savings
+FieldNameAlt: Savings
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: account_num
+FieldNameAlt: Checking
+FieldFlags: 25165824
+FieldJustification: Left
+FieldMaxLength: 17
+---
+FieldType: Text
+FieldName: 14
+FieldNameAlt: Amount You Owe 14 If line 12 is larger than line 9, subtract line 9 from line 12. This is the amount you owe. For details on how to pay, see instructions.  14
+FieldFlags: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: name
+FieldNameAlt: Your first name and initial
+FieldFlags: 0
+FieldJustification: Left

@@ -1,6 +1,7 @@
 
 html {
 	font-weight: lighter;
+  background-color: #21D5FB
 }
 
 nav {
@@ -49,7 +50,7 @@ a:hover {
 .followText {
     font-family: Roboto-Light;
     color: black;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
 }
 
 .about-codepen {
@@ -89,10 +90,12 @@ a:hover {
 
 .get-started {
   position: absolute;
-  width: 9em;
-  margin-left: -4.5em;
-  left: 50%;
+  width: 35vw;
+ 
+  left: 32.5%;
   top: 20%;
+  font-size: 5vw;
+  height: 10vw;
 }
 
 footer {
@@ -101,7 +104,15 @@ footer {
 }
 
 .github {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+.github img {
+  width: 10%;
+}
+
+.codepen img {
+  width: 12%;
 }
 
 /*/////////////////////////////////////////////////*/
@@ -189,6 +200,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     font-size: 1.2rem;
 }
 
+
+.pac-container { z-index: 100000 !important; }
+
+.pac-item { z-index: 100000 !important; }
 .yourName {
 	position: relative;
 	top: 1rem;
@@ -243,7 +258,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     bottom: 3rem;
 
 }
-#validNameCheck {
+#validNameCheck, #validSSNCheck, #validLastNameCheck {
 	text-align: center;
 	font-style: italic;
 	color: red;
@@ -262,6 +277,11 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 
 }
 
+.backBtn3 {
+    width: 140px;
+    text-transform: none;
+
+}
 .blueLine {
     width: 70%;
     height: 10px;
@@ -440,11 +460,11 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   background-size: cover;
   transition: background-image 2s ease;
 }
- #map {
+/* #map {
         height: 500px;
         width: 800px;
         margin: 20px auto;
-      }
+      }*/
       .center {
       text-align: center;
     }
@@ -539,8 +559,8 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 #map {
-  width: 70%;
-  height: 400px;
+  width: 500px;
+  height: 450px;
   background: #0082C3;
   margin: 0px auto;
 }
@@ -651,8 +671,8 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     background-color: red;
  
 }
-#exitBtn1 {
-    margin: 40px 100px;
+#exitBtn1, #downloadBtn {
+    margin: 40px 10px;
 }
 
 /*Amazon*/
@@ -754,7 +774,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 .refundAmt {
-    font-size: 80px;
+    font-size: 8vw;
     color: #42E035 ;
     font-weight: bolder;
 }
@@ -762,7 +782,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 .oweText {
     font-weight: bold;
     color: red;
-    font-size: 80px;
+    font-size: 8vw;
 }
 
 .amazonText {
@@ -909,6 +929,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 #patriotText{
   background-color: white;
   opacity: 0.8;
+  padding-bottom: 20px;
 }
 
 #armedForcesQuestion0 {
@@ -971,11 +992,54 @@ p {
   margin: 0px;
 }
 
+.unemploymentIcon {
+  margin: 60%;
+
+}
+
+.health {
+      width: 30%;
+    margin-top: 10px;
+}
+
+.pac-container { z-index: 10000 !important; }
+
+#refundBackBtn, #oweBackBtn {
+    background-color: beige;
+    color: black;
+}
+
+.boldEIC {
+  color: black;
+  font-weight: bolder;
+}
+
+#finalRefundText {
+  font-weight: normal;
+  font-size: 2.5vw;
+}
+
+#finalRefundTextSpan {
+  font-weight: bold;
+  color: #0082C3;
+}
+
+/*//_______________________________________________________________
+
+
+Media Queries Below HERE!!!!!!!!!!!!!
+
+
+
+
+_______________________________________________________________
+/**/
+
 @media (min-width: 0px) and (max-width: 767px) {
   .back-button {
     position:relative; 
     display: inline-block;
-    /*margin-top: 40px;*/
+    /*margin-top: 40px;
 
   }
   .next-button {
@@ -983,12 +1047,20 @@ p {
     display: inline-block; 
     margin-top:2%
   }
+ /* .health {
+    width: auto;
+    margin-top: 0%;
+}*/
 
+  #patriotText {
+    padding-bottom: 0px;
+  }
   .flow-text{
     font-size: 3vw;
   }
   #unemploymentIcon {
     width:40%;
+    margin-top: 0px;
   }
   .alaska {
     width: 50%;
@@ -1024,4 +1096,16 @@ p {
 .row16 {
   top: 0;
   margin-bottom: 0;
+}
+
+.codepen img {
+  width: 18%;
+}
+
+.github img {
+  width: 15%;
+}
+
+.followText {
+  font-size: 2.5vw;
 }
